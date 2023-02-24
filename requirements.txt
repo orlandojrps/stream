@@ -6,3 +6,4 @@ transformers
 torch
 Nominatim
 geopy
+plotly
