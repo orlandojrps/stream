@@ -5,4 +5,4 @@ snscrape
 transformers
 torch
 Nominatim
-geopy.geocoders
+geopy
