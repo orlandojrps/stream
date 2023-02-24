@@ -7,3 +7,4 @@ torch
 Nominatim
 geopy
 plotly
+folium
