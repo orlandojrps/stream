@@ -4,3 +4,4 @@ textblob
 snscrape
 transformers
 torch
+Nominatim
