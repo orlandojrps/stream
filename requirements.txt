@@ -3,3 +3,4 @@ pandas
 textblob
 snscrape
 transformers
+torch
