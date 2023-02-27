@@ -171,7 +171,7 @@ def app():
         ax.set_ylabel('CHD Risk')
     
     
-     with col2:
+    with col2:
         imag(prediction)
 if __name__ == "__main__":
     app()
