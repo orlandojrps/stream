@@ -26,11 +26,11 @@ def app():
     st.title('CHD Risk Prediction App')
     st.write('Enter the following information to predict your CHD risk:')
     age = st.slider('Age', 25, 80, 50)
+    # Get the sex from the user
     sex = st.selectbox('Sex', ['Male', 'Female'])
-    if sex == 'Male':
-        sex_val = 1
-    else:
-        sex_val = 0
+
+    # Map the sex to the corresponding numeric value
+    sex_val = 1 if sex == 'Male' else 0
     # Define the dictionary to map chest pain type to numeric values
     cp_dict = {'Typical Angina': 0, 'Atypical Angina': 1, 'Non-anginal Pain': 2, 'Asymptomatic': 3}
 
