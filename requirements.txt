@@ -15,4 +15,3 @@ seaborn
 joblib
 #scikit-learn 
 scikit-learn==1.1.1
-matplotlib.pyplot
