@@ -94,7 +94,18 @@ def app():
     prediction = predict_chd_risk(features)
     st.write('Your predicted CHD risk is:', prediction)
     st.write('array',features)
-    
+    # Change the background color of the app based on the predicted CHD risk
+    if prediction == 1:
+        st.markdown(
+            """
+            <style>
+            body {
+                background-color: #FFC7C7;
+            }
+            </style>
+            """,
+            unsafe_allow_html=True
+        )
 
 if __name__ == "__main__":
     app()
