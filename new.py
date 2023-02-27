@@ -38,7 +38,7 @@ def app():
              f"""
              <style>
              .stApp {{
-                 background-image: url("https://previews.123rf.com/images/nexusplexus/nexusplexus1306/nexusplexus130601789/20326618-illustration-with-medical-background-having-heart-beat-doctor-and-stethoscope.jpg");
+                 background-image: url("https://raw.githubusercontent.com/orlandojrps/stream/main/heart.jpg");
                  background-attachment: fixed;
                  background-size: cover
              }}
