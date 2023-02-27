@@ -25,7 +25,7 @@ def predict_chd_risk(features):
 #st.title('CHD Risk Prediction App')
 # Define the Streamlit app
 def app():
-st.set_page_config(page_title='CHD Risk Prediction App', page_icon=':heart:')
+    st.set_page_config(page_title='CHD Risk Prediction App', page_icon=':heart:')
 
         # Set page title and favicon
     #
