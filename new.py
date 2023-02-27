@@ -43,7 +43,13 @@ def app():
     trestbps = st.slider('Resting Blood Pressure (mm Hg)', 90, 200, 120)
     chol = st.slider('Serum Cholesterol (mg/dl)', 100, 500, 240)
     
-    features = np.array([[age,	sex_val,	cp_val,	trestbps,	chol,	0,	0,	122,	0,	1.0,	1,	0,	2]])
+    # Get the Fasting Blood Sugar value from the user
+    fbs = st.selectbox('Fasting Blood Sugar > 120 mg/dl', ['False', 'True'])
+
+    # Map the Fasting Blood Sugar value to the corresponding numeric value
+    fbs_val = int(fbs == 'True')
+    
+    features = np.array([[age,	sex_val,	cp_val,	trestbps,	chol,	fbs_val,	0,	122,	0,	1.0,	1,	0,	2]])
     prediction = predict_chd_risk(features)
     st.write('Your predicted CHD risk is:', prediction)
     st.write('array',features)
