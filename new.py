@@ -59,9 +59,16 @@ def app():
     restecg_val = restecg_dict[restecg]
     
     thalach = st.slider('Maximum Heart Rate Achieved', 50, 220, 150)
-
     
-    features = np.array([[age,	sex_val,	cp_val,	trestbps,	chol,	fbs_val,	restecg_val,	thalach,	0,	1.0,	1,	0,	2]])
+    # Get the Exercise Induced Angina value from the user
+    exang = st.selectbox('Exercise Induced Angina', ['No', 'Yes'])
+
+    # Map the Exercise Induced Angina value to the corresponding numeric value
+    exang_val = int(exang == 'Yes')
+    
+    oldpeak = st.slider('ST Depression Induced by Exercise', 0.0, 6.0, 2.0, 0.1)
+    
+    features = np.array([[age,	sex_val,	cp_val,	trestbps,	chol,	fbs_val,	restecg_val,	thalach,	exang_val,	oldpeak,	1,	0,	2]])
     prediction = predict_chd_risk(features)
     st.write('Your predicted CHD risk is:', prediction)
     st.write('array',features)
