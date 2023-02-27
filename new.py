@@ -26,7 +26,7 @@ def predict_chd_risk(features):
 # Define the Streamlit app
 def app():
     # Use the columns function to create two columns
-    col1, col2 = st.columns([4, 1])
+    col1, col2 = st.columns([6, 1])
     
     # Display the image in the first column
     with col1:
