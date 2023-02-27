@@ -32,18 +32,16 @@ def app():
 
     # Set background image using CSS
     
+   
     st.markdown(
-            """
-          <style>
-                body {
-                background-image: url('https://previews.123rf.com/images/nexusplexus/nexusplexus1306/nexusplexus130601789/20326618-illustration-with-medical-background-having-heart-beat-doctor-and-stethoscope.jpg');
-                background-size: cover;
-                }
-                </style>
-            """
-            , unsafe_allow_html=True
-     )
- 
+       f"""
+       <style>
+       p {
+       background-image: url('ttps://previews.123rf.com/images/nexusplexus/nexusplexus1306/nexusplexus130601789/20326618-illustration-with-medical-background-having-heart-beat-doctor-and-stethoscope.jpg');
+       }
+       </style>
+       """,
+       unsafe_allow_html=True)
     
     
     st.title('CHD Risk Prediction App')
