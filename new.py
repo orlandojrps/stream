@@ -40,7 +40,10 @@ def app():
     # Map the chest pain type to the corresponding numeric value using the dictionary
     cp_val = cp_dict[cp]
    
-    features = np.array([[age,	sex_val,	cp_val,	100,	248,	0,	0,	122,	0,	1.0,	1,	0,	2]])
+    trestbps = st.slider('Resting Blood Pressure (mm Hg)', 90, 200, 120)
+    chol = st.slider('Serum Cholesterol (mg/dl)', 100, 500, 240)
+    
+    features = np.array([[age,	sex_val,	cp_val,	trestbps,	chol,	0,	0,	122,	0,	1.0,	1,	0,	2]])
     prediction = predict_chd_risk(features)
     st.write('Your predicted CHD risk is:', prediction)
     st.write('array',features)
