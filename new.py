@@ -120,7 +120,7 @@ def app():
             """
             <h2 style='text-align: center;'>Your predicted CHD risk is <span style='color: green;'>low</span>.</h2>
             <div style='text-align: center;'>
-                <img src='https://media.giphy.com/media/3oEjHQkPQo2M2ZjKli/giphy.gif'>
+                <img src='https://media.giphy.com/media/2WRAeRpoIWU0wVxj7u/giphy.gif'>
             </div>
             """
             , unsafe_allow_html=True
@@ -130,7 +130,7 @@ def app():
             """
             <h2 style='text-align: center;'>Your predicted CHD risk is <span style='color: red;'>high</span>.</h2>
             <div style='text-align: center;'>
-                <img src='https://media.giphy.com/media/2fSfs6RvZ6LlplTnJX/giphy.gif'>
+                <img src='https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExYjZlNGI1YThlM2YyY2E2Nzg1N2JhOTBmMGU2YzQ5ZDM2YTk4MWU5OCZjdD1n/pme5OjYY04WaWD0WMX/giphy.gif'>
             </div>
             """
             , unsafe_allow_html=True
