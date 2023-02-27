@@ -9,4 +9,4 @@ geopy
 plotly
 folium
 #folium_static
-scipy.stats
+scipy
