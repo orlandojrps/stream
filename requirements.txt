@@ -11,3 +11,5 @@ folium
 #folium_static
 scipy
 matplotlib
+seaborn
+joblib
