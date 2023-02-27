@@ -3,6 +3,8 @@ import numpy as np
 import joblib
 from io import BytesIO
 import requests
+import matplotlib.pyplot as plt
+
 import warnings
 warnings.filterwarnings("ignore")
 
