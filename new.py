@@ -68,10 +68,10 @@ def app():
     
     oldpeak = st.slider('ST Depression Induced by Exercise', 0.0, 6.0, 2.0, 0.1)
     slope = st.selectbox('Slope of Peak Exercise ST Segment', ['Upsloping', 'Flat', 'Downsloping'])
-    ca = st.selectbox('Number of Major Vessels Colored by Fluoroscopy', ['0', '1', '2', '3'])
+    ca = int(st.selectbox('Number of Major Vessels Colored by Fluoroscopy', ['0', '1', '2', '3']))
     thal = st.selectbox('Thalassemia', ['Normal', 'Fixed Defect', 'Reversible Defect'])
     
-    features = np.array([[age,	sex_val,	cp_val,	trestbps,	chol,	fbs_val,	restecg_val,	thalach,	exang_val,	oldpeak,	1,	1,	2]])
+    features = np.array([[age,	sex_val,	cp_val,	trestbps,	chol,	fbs_val,	restecg_val,	thalach,	exang_val,	oldpeak,	1,	ca,	2]])
     prediction = predict_chd_risk(features)
     st.write('Your predicted CHD risk is:', prediction)
     st.write('array',features)
