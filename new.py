@@ -25,6 +25,11 @@ def predict_chd_risk(features):
 st.title('CHD Risk Prediction App')
 # Define the Streamlit app
 def app():
+        # Set the background image
+    st.set_page_config(page_title='CHD Risk Prediction App', page_icon=':heart:', layout='wide', 
+                       initial_sidebar_state='auto', 
+                       page_bg_image='https://previews.123rf.com/images/nexusplexus/nexusplexus1306/nexusplexus130601789/20326618-illustration-with-medical-background-having-heart-beat-doctor-and-stethoscope.jpg')
+    
     st.title('CHD Risk Prediction App')
     st.write('Enter the following information to predict your CHD risk:')
     age = st.slider('Age', 25, 80, 50)
