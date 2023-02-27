@@ -28,7 +28,7 @@ def app():
 
 
         # Set page title and favicon
-    st.set_page_config(page_title='CHD Risk Prediction App', page_icon=':heart:')
+    #st.set_page_config(page_title='CHD Risk Prediction App', page_icon=':heart:')
 
     # Set background image using CSS
     page_bg_img = """
@@ -45,7 +45,7 @@ def app():
     
     
     
-    #st.title('CHD Risk Prediction App')
+    st.title('CHD Risk Prediction App')
     st.write('Enter the following information to predict your CHD risk:')
     age = st.slider('Age', 25, 80, 50)
     # Get the sex from the user
