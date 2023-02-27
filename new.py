@@ -27,27 +27,27 @@ def predict_chd_risk(features):
 def app():
       # display the bar chart in Streamlit
     #st.pyplot(fig)
-    
-    if prediction == 0:
-        st.markdown(
-            """
-            <h2 style='text-align: center;'>Your predicted CHD risk is <span style='color: green;'>low</span>.</h2>
-            <div style='text-align: center;'>
-                <img src='https://media.giphy.com/media/2WRAeRpoIWU0wVxj7u/giphy.gif'>
-            </div>
-            """
-            , unsafe_allow_html=True
-        )
-    else:
-        st.markdown(
-            """
-            <h2 style='text-align: center;'>Your predicted CHD risk is <span style='color: red;'>high</span>.</h2>
-            <div style='text-align: center;'>
-                <img src='https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExYjZlNGI1YThlM2YyY2E2Nzg1N2JhOTBmMGU2YzQ5ZDM2YTk4MWU5OCZjdD1n/pme5OjYY04WaWD0WMX/giphy.gif'>
-            </div>
-            """
-            , unsafe_allow_html=True
-        )
+    def imag(prediction):
+        if prediction == 0:
+            st.markdown(
+                """
+                <h2 style='text-align: center;'>Your predicted CHD risk is <span style='color: green;'>low</span>.</h2>
+                <div style='text-align: center;'>
+                    <img src='https://media.giphy.com/media/2WRAeRpoIWU0wVxj7u/giphy.gif'>
+                </div>
+                """
+                , unsafe_allow_html=True
+            )
+        else:
+            st.markdown(
+                """
+                <h2 style='text-align: center;'>Your predicted CHD risk is <span style='color: red;'>high</span>.</h2>
+                <div style='text-align: center;'>
+                    <img src='https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExYjZlNGI1YThlM2YyY2E2Nzg1N2JhOTBmMGU2YzQ5ZDM2YTk4MWU5OCZjdD1n/pme5OjYY04WaWD0WMX/giphy.gif'>
+                </div>
+                """
+                , unsafe_allow_html=True
+            )
 
     st.set_page_config(page_title='CHD Risk Prediction App', page_icon=':heart:')
 
@@ -160,7 +160,7 @@ def app():
     ax.set_xlabel('Probability')
     ax.set_ylabel('CHD Risk')
 
-  
+    imag(prediction)
 if __name__ == "__main__":
     app()
 
