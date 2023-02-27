@@ -30,16 +30,7 @@ def app():
     
     # Display the image in the first column
     with col1:
-        
-    
-    # Display other content in the second column
-   
-      # display the bar chart in Streamlit
-    #st.pyplot(fig)
-    
-        
-
-        st.set_page_config(page_title='CHD Risk Prediction App', page_icon=':heart:')
+        #st.set_page_config(page_title='CHD Risk Prediction App', page_icon=':heart:')
 
             # Set page title and favicon
         #
