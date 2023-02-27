@@ -71,7 +71,7 @@ def app():
     ca = st.selectbox('Number of Major Vessels Colored by Fluoroscopy', ['0', '1', '2', '3'])
     thal = st.selectbox('Thalassemia', ['Normal', 'Fixed Defect', 'Reversible Defect'])
     
-    features = np.array([[age,	sex_val,	cp_val,	trestbps,	chol,	fbs_val,	restecg_val,	thalach,	exang_val,	oldpeak,	1,	ca,	2]])
+    features = np.array([[age,	sex_val,	cp_val,	trestbps,	chol,	fbs_val,	restecg_val,	thalach,	exang_val,	oldpeak,	1,	1,	2]])
     prediction = predict_chd_risk(features)
     st.write('Your predicted CHD risk is:', prediction)
     st.write('array',features)
