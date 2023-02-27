@@ -31,8 +31,17 @@ def app():
         sex_val = 1
     else:
         sex_val = 0
+    cp = st.selectbox('Chest Pain Type', ['Typical Angina', 'Atypical Angina', 'Non-anginal Pain', 'Asymptomatic'])
+    if cp == 'Typical Angina':
+        cp_val = 0
+    elif cp == 'Atypical Angina':
+        cp_val = 1
+    elif cp == 'Non-anginal Pain':
+        cp_val = 2
+    else:
+        cp_val = 3
    
-    features = np.array([[age,	sex_val,	0,	100,	248,	0,	0,	122,	0,	1.0,	1,	0,	2]])
+    features = np.array([[age,	sex_val,	cp_val,	100,	248,	0,	0,	122,	0,	1.0,	1,	0,	2]])
     prediction = predict_chd_risk(features)
     st.write('Your predicted CHD risk is:', prediction)
     st.write('array',features)
