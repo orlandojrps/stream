@@ -160,7 +160,7 @@ def app():
     ax.set_xlabel('Probability')
     ax.set_ylabel('CHD Risk')
 
-    imag(prediction)
+    #imag(prediction)
 if __name__ == "__main__":
     app()
 
