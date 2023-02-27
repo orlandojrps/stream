@@ -13,3 +13,7 @@ scipy
 matplotlib
 seaborn
 joblib
+sklearn.linear_model
+sklearn.neighbors
+sklearn.ensemble
+sklearn.model_selection
