@@ -114,6 +114,27 @@ def app():
 
     # display the bar chart in Streamlit
     st.pyplot(fig)
+    
+    if prediction == 0:
+        st.markdown(
+            """
+            <h2 style='text-align: center;'>Your predicted CHD risk is <span style='color: green;'>low</span>.</h2>
+            <div style='text-align: center;'>
+                <img src='https://media.giphy.com/media/3oEjHQkPQo2M2ZjKli/giphy.gif'>
+            </div>
+            """
+            , unsafe_allow_html=True
+        )
+    else:
+        st.markdown(
+            """
+            <h2 style='text-align: center;'>Your predicted CHD risk is <span style='color: red;'>high</span>.</h2>
+            <div style='text-align: center;'>
+                <img src='https://media.giphy.com/media/2fSfs6RvZ6LlplTnJX/giphy.gif'>
+            </div>
+            """
+            , unsafe_allow_html=True
+        )
 
 if __name__ == "__main__":
     app()
