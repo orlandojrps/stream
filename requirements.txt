@@ -8,4 +8,4 @@ Nominatim
 geopy
 plotly
 folium
-folium_static
+#folium_static
