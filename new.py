@@ -27,7 +27,7 @@ def app():
     st.write('Enter the following information to predict your CHD risk:')
     age = st.slider('Age', 25, 80, 50)
    
-    features = np.array([[58,	0,	0,	100,	248,	0,	0,	122,	0,	1.0,	1,	0,	2]])
+    features = np.array([[age,	0,	0,	100,	248,	0,	0,	122,	0,	1.0,	1,	0,	2]])
     prediction = predict_chd_risk(features)
     st.write('Your predicted CHD risk is:', prediction)
     
