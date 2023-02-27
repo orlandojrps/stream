@@ -27,7 +27,7 @@ st.title('CHD Risk Prediction App')
 def app():
 
     # Set page title and favicon
-    st.set_page_config(page_title='CHD Risk Prediction App')
+    #st.set_page_config(page_title='CHD Risk Prediction App')
 
     # Add custom CSS for background image
     st.markdown("""
