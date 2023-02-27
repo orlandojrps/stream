@@ -27,8 +27,12 @@ def app():
     st.write('Enter the following information to predict your CHD risk:')
     age = st.slider('Age', 25, 80, 50)
     sex = st.selectbox('Sex', ['Male', 'Female'])
+    if sex == 'Male':
+        sex_val = 1
+    else:
+        sex_val = 0
    
-    features = np.array([[age,	sex,	0,	100,	248,	0,	0,	122,	0,	1.0,	1,	0,	2]])
+    features = np.array([[age,	sex_val,	0,	100,	248,	0,	0,	122,	0,	1.0,	1,	0,	2]])
     prediction = predict_chd_risk(features)
     st.write('Your predicted CHD risk is:', prediction)
     st.write('array',features)
