@@ -6,15 +6,15 @@ import requests
 mLink = 'https://github.com/orlandojrps/stream/blob/main/model.pkl?raw=true'
 mfile = BytesIO(requests.get(mLink).content)
 
-model = joblib.load('https://github.com/orlandojrps/stream/blob/main/model.pkl?raw=true')
+model = joblib.load(mfile)
 
 # Load the pre-trained linear regression model
-lr_model = joblib.load(model)
+#lr_model = joblib.load(model)
 
 
 # Define the function to make a prediction
 def predict_chd_risk(features):
-    prediction = lr_model.predict(features)
+    prediction = model.predict(features)
     return prediction[0]
 
 # Define the Streamlit app
