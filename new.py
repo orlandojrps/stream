@@ -25,6 +25,15 @@ def predict_chd_risk(features):
 #st.title('CHD Risk Prediction App')
 # Define the Streamlit app
 def app():
+    # Use the columns function to create two columns
+    col1, col2 = st.columns([1, 3])
+    
+    # Display the image in the first column
+    with col1:
+        
+    
+    # Display other content in the second column
+   
       # display the bar chart in Streamlit
     #st.pyplot(fig)
     
@@ -161,8 +170,9 @@ def app():
     ax.set_xlabel('Probability')
     ax.set_ylabel('CHD Risk')
     
-    imag(prediction)
     
+     with col2:
+        imag(prediction)
 if __name__ == "__main__":
     app()
 
