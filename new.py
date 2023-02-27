@@ -33,21 +33,21 @@ def app():
     # Set background image using CSS
     
    
-def add_bg_from_url():
-    st.markdown(
-         f"""
-         <style>
-         .stApp {{
-             background-image: url("https://previews.123rf.com/images/nexusplexus/nexusplexus1306/nexusplexus130601789/20326618-illustration-with-medical-background-having-heart-beat-doctor-and-stethoscope.jpg");
-             background-attachment: fixed;
-             background-size: cover
-         }}
-         </style>
-         """,
-         unsafe_allow_html=True
-     )
+    def add_bg_from_url():
+        st.markdown(
+             f"""
+             <style>
+             .stApp {{
+                 background-image: url("https://previews.123rf.com/images/nexusplexus/nexusplexus1306/nexusplexus130601789/20326618-illustration-with-medical-background-having-heart-beat-doctor-and-stethoscope.jpg");
+                 background-attachment: fixed;
+                 background-size: cover
+             }}
+             </style>
+             """,
+             unsafe_allow_html=True
+         )
 
-add_bg_from_url() 
+    add_bg_from_url() 
     
     st.title('CHD Risk Prediction App')
     st.write('Enter the following information to predict your CHD risk:')
