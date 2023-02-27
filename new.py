@@ -58,7 +58,10 @@ def app():
     # Map the Resting ECG value to the corresponding numeric value using the dictionary
     restecg_val = restecg_dict[restecg]
     
-    features = np.array([[age,	sex_val,	cp_val,	trestbps,	chol,	fbs_val,	restecg_val,	122,	0,	1.0,	1,	0,	2]])
+    thalach = st.slider('Maximum Heart Rate Achieved', 50, 220, 150)
+
+    
+    features = np.array([[age,	sex_val,	cp_val,	trestbps,	chol,	fbs_val,	restecg_val,	thalach,	0,	1.0,	1,	0,	2]])
     prediction = predict_chd_risk(features)
     st.write('Your predicted CHD risk is:', prediction)
     st.write('array',features)
