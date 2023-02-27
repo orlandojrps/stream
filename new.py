@@ -26,22 +26,17 @@ st.title('CHD Risk Prediction App')
 # Define the Streamlit app
 def app():
 
-    # Set page title and favicon
-    #st.set_page_config(page_title='CHD Risk Prediction App')
-
-    # Add custom CSS for background image
-    st.markdown("""
+ # Set background color
+    st.markdown(
+        """
         <style>
-            body {
-                background-image: url("https://previews.123rf.com/images/nexusplexus/nexusplexus1306/nexusplexus130601789/20326618-illustration-with-medical-background-having-heart-beat-doctor-and-stethoscope.jpg");
-                background-size: cover;
-                background-repeat: no-repeat;
-                background-attachment: fixed;
-            }
+        body {
+            background-color: #F5F5F5;
+        }
         </style>
-    """, unsafe_allow_html=True)
-
-    
+        """,
+        unsafe_allow_html=True
+    )
     
     st.title('CHD Risk Prediction App')
     st.write('Enter the following information to predict your CHD risk:')
