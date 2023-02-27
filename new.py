@@ -27,7 +27,7 @@ def predict_chd_risk(features):
 def app():
       # display the bar chart in Streamlit
     #st.pyplot(fig)
-    imag(prediction)
+    
     def imag(prediction):
         if prediction == 0:
             st.markdown(
@@ -160,7 +160,8 @@ def app():
     ax.barh(labels, values)
     ax.set_xlabel('Probability')
     ax.set_ylabel('CHD Risk')
-
+    
+    imag(prediction)
     
 if __name__ == "__main__":
     app()
