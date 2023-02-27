@@ -6,10 +6,11 @@ import requests
 mLink = 'https://github.com/orlandojrps/stream/blob/main/model.pkl?raw=true'
 mfile = BytesIO(requests.get(mLink).content)
 
-model = joblib.load(mfile)
+model = joblib.load('https://github.com/orlandojrps/stream/blob/main/model.pkl?raw=true')
 
 # Load the pre-trained linear regression model
 lr_model = joblib.load(model)
+
 
 # Define the function to make a prediction
 def predict_chd_risk(features):
