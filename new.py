@@ -93,21 +93,25 @@ def app():
     features = np.array([[age,	sex_val,	cp_val,	trestbps,	chol,	fbs_val,	restecg_val,	thalach,	exang_val,	oldpeak,	slope_val,	ca,	thal_val]])
     prediction = predict_chd_risk(features)
     st.write('Your predicted CHD risk is:', prediction)
+    st.write('array',features)  
     
+
+    # set up the bar chart data
     if prediction == 0:
-        st.markdown(
-            """
-            <style>
-            body {
-                background-color: #FFC7C7;
-            }
-            </style>
-            """,
-            unsafe_allow_html=True
-        )
-    st.write('array',features)   
-    # Change the background color of the app based on the predicted CHD risk
-# Change the background color of the app based on the predicted CHD risk
+        values = [1-prediction, prediction]
+        labels = ['Low Risk', 'High Risk']
+    else:
+        values = [1-prediction, prediction]
+        labels = ['High Risk', 'Low Risk']
+
+    # create the bar chart
+    fig, ax = plt.subplots()
+    ax.barh(labels, values)
+    ax.set_xlabel('Probability')
+    ax.set_ylabel('CHD Risk')
+
+    # display the bar chart in Streamlit
+    st.pyplot(fig)
 
 if __name__ == "__main__":
     app()
