@@ -31,15 +31,14 @@ def app():
         sex_val = 1
     else:
         sex_val = 0
-    cp = st.selectbox('Chest Pain Type', ['Typical Angina', 'Atypical Angina', 'Non-anginal Pain', 'Asymptomatic'])
-    if cp == 'Typical Angina':
-        cp_val = 0
-    elif cp == 'Atypical Angina':
-        cp_val = 1
-    elif cp == 'Non-anginal Pain':
-        cp_val = 2
-    else:
-        cp_val = 3
+    # Define the dictionary to map chest pain type to numeric values
+    cp_dict = {'Typical Angina': 0, 'Atypical Angina': 1, 'Non-anginal Pain': 2, 'Asymptomatic': 3}
+
+    # Get the chest pain type from the user
+    cp = st.selectbox('Chest Pain Type', list(cp_dict.keys()))
+
+    # Map the chest pain type to the corresponding numeric value using the dictionary
+    cp_val = cp_dict[cp]
    
     features = np.array([[age,	sex_val,	cp_val,	100,	248,	0,	0,	122,	0,	1.0,	1,	0,	2]])
     prediction = predict_chd_risk(features)
