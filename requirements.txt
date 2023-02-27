@@ -10,3 +10,4 @@ plotly
 folium
 #folium_static
 scipy
+matplotlib
