@@ -31,18 +31,19 @@ def app():
     #st.set_page_config(page_title='CHD Risk Prediction App', page_icon=':heart:')
 
     # Set background image using CSS
-    page_bg_img = """
-    <style>
-    body {
-    background-image: url('https://previews.123rf.com/images/nexusplexus/nexusplexus1306/nexusplexus130601789/20326618-illustration-with-medical-background-having-heart-beat-doctor-and-stethoscope.jpg');
-    background-size: cover;
-    }
-    </style>
-    """
-
-    st.markdown(page_bg_img, unsafe_allow_html=True)
-
     
+      st.markdown(
+            """
+          <style>
+                body {
+                background-image: url('https://previews.123rf.com/images/nexusplexus/nexusplexus1306/nexusplexus130601789/20326618-illustration-with-medical-background-having-heart-beat-doctor-and-stethoscope.jpg');
+                background-size: cover;
+                }
+                </style>
+            """
+            , unsafe_allow_html=True
+        )
+ 
     
     
     st.title('CHD Risk Prediction App')
