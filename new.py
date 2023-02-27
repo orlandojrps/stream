@@ -79,7 +79,7 @@ def app():
 
     
     ca = int(st.selectbox('Number of Major Vessels Colored by Fluoroscopy', ['0', '1', '2', '3']))
-    thal = st.selectbox('Thalassemia', ['Normal', 'Fixed Defect', 'Reversible Defect'])
+    #thal = st.selectbox('Thalassemia', ['Normal', 'Fixed Defect', 'Reversible Defect'])
     
     # Define the dictionary to map Thalassemia to numeric values
     thal_dict = {'Normal': 1, 'Fixed Defect': 2, 'Reversible Defect': 3}
