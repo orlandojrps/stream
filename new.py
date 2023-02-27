@@ -49,7 +49,16 @@ def app():
     # Map the Fasting Blood Sugar value to the corresponding numeric value
     fbs_val = int(fbs == 'True')
     
-    features = np.array([[age,	sex_val,	cp_val,	trestbps,	chol,	fbs_val,	0,	122,	0,	1.0,	1,	0,	2]])
+    # Define the dictionary to map Resting ECG to numeric values
+    restecg_dict = {'Normal': 0, 'ST-T Abnormality': 1, 'Probable/Definite Left Ventricular Hypertrophy': 2}
+
+    # Get the Resting ECG value from the user
+    restecg = st.selectbox('Resting ECG', list(restecg_dict.keys()))
+
+    # Map the Resting ECG value to the corresponding numeric value using the dictionary
+    restecg_val = restecg_dict[restecg]
+    
+    features = np.array([[age,	sex_val,	cp_val,	trestbps,	chol,	fbs_val,	restecg_val,	122,	0,	1.0,	1,	0,	2]])
     prediction = predict_chd_risk(features)
     st.write('Your predicted CHD risk is:', prediction)
     st.write('array',features)
