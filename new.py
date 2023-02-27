@@ -3,6 +3,9 @@ import numpy as np
 import joblib
 from io import BytesIO
 import requests
+import warnings
+warnings.filterwarnings("ignore")
+
 mLink = 'https://github.com/orlandojrps/stream/blob/main/model.pkl?raw=true'
 mfile = BytesIO(requests.get(mLink).content)
 
