@@ -571,7 +571,7 @@ lr_model.fit(X_train, y_train)
 
 joblib.dump(lr_model, 'model.pkl')
 
-!ls
+#!ls
 
 from io import BytesIO
 import requests
