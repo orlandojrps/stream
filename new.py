@@ -104,7 +104,7 @@ def app():
         labels = ['Low Risk', 'High Risk']
     else:
         values = [1-prediction, prediction]
-        labels = ['High Risk', 'Low Risk']
+        labels = ['Low Risk', 'High Risk']
 
     # create the bar chart
     fig, ax = plt.subplots()
