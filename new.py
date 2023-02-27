@@ -32,7 +32,7 @@ def app():
 
     # Set background image using CSS
     
-      st.markdown(
+    st.markdown(
             """
           <style>
                 body {
@@ -42,7 +42,7 @@ def app():
                 </style>
             """
             , unsafe_allow_html=True
-        )
+     )
  
     
     
