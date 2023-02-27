@@ -30,6 +30,7 @@ def app():
     features = np.array([[age,	0,	0,	100,	248,	0,	0,	122,	0,	1.0,	1,	0,	2]])
     prediction = predict_chd_risk(features)
     st.write('Your predicted CHD risk is:', prediction)
+    st.write('array',features)
     
 
 if __name__ == "__main__":
