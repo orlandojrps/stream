@@ -26,7 +26,7 @@ def predict_chd_risk(features):
 # Define the Streamlit app
 def app():
       # display the bar chart in Streamlit
-    st.pyplot(fig)
+    #st.pyplot(fig)
     
     if prediction == 0:
         st.markdown(
