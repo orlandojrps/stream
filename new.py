@@ -38,7 +38,7 @@ def app():
              f"""
              <style>
              .stApp {{
-                 background-image: url("https://raw.githubusercontent.com/orlandojrps/stream/main/heart.jpg");
+                 background-image: url("https://raw.githubusercontent.com/orlandojrps/stream/main/heart2.jpg");
                  background-attachment: fixed;
                  background-size: cover
              }}
