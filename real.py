@@ -34,7 +34,7 @@ def geocode_and_plot_addresses(df):
     return m
 
 # Carregar DataFrame
-df = pd.read_csv('https://raw.githubusercontent.com/orlandojrps/stream/main/df_final.csv')
+df = pd.read_csv('https://raw.githubusercontent.com/orlandojrps/stream/main/stage2_df.csv')
 
 # Criar input para selecionar city_area
 city_area = st.selectbox('Selecione uma city_area', df['city_area'].unique())
