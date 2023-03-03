@@ -24,8 +24,7 @@ def geocode_and_plot_addresses(df):
     
     # create a streamlit table and add it to the interface
     summary_table = pd.DataFrame({
-         st.image('https://img.icons8.com/material-outlined/24/000000/price-tag.png'),
-        'Number of Houses': [num_houses]
+        ' ': [st.image('https://img.icons8.com/material-outlined/24/000000/house.png')]
     })
     
     # plot the coordinates on a map using Folium
