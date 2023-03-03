@@ -16,7 +16,7 @@ def geocode_and_plot_addresses(df):
     # loop over addresses, geocode each one, and extract the latitude and longitude
     for address in addresses:
         location = geolocator.geocode(address)
-        time.sleep(2) # add a 1.1-second interval between requests
+        time.sleep(0) # add a 1.1-second interval between requests
 
     
     # plot the coordinates on a map using Folium
