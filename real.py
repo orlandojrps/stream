@@ -34,15 +34,14 @@ def geocode_and_plot_addresses(df):
         
         
         # plot the coordinates on a map using Folium
-        map_center = [location.latitude, location.longitude] # center the map on the first address
+        map_center = [51.897928, -8.470579] # center the map on Cork City
         m = folium.Map(location=map_center, zoom_start=12)
         for i, row in df.iterrows():
-            if row['Latitude'] and row['Longitude']:
-                folium.Marker([row['Latitude'], row['Longitude']], popup=row['Address']).add_to(m)
+                if row['Latitude'] and row['Longitude']:
+                        folium.Marker([row['Latitude'], row['Longitude']], popup=row['Address']).add_to(m)
 
-        # add the map to the interface
+    # add the map to the interface
         st.write(m._repr_html_(), unsafe_allow_html=True)
-
 
 # Load the DataFrame
 df = pd.read_csv('https://raw.githubusercontent.com/orlandojrps/stream/main/df_final.csv')
