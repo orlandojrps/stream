@@ -3,6 +3,7 @@ import streamlit as st
 import folium
 from geopy.geocoders import Nominatim
 import time
+import pandas as pd
 
 # Função para plotar mapa
 def geocode_and_plot_addresses(df):
@@ -33,7 +34,7 @@ def geocode_and_plot_addresses(df):
     return m
 
 # Carregar DataFrame
-df = load_data()
+df = pd.read_csv('https://raw.githubusercontent.com/orlandojrps/stream/main/df_final.csv')
 
 # Criar input para selecionar city_area
 city_area = st.selectbox('Selecione uma city_area', df['city_area'].unique())
