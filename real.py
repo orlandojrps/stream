@@ -37,7 +37,10 @@ def geocode_and_plot_addresses(df):
         'Highest Price': '${:.2f}'
     })
 
+    house_icon = Image.open("https://raw.githubusercontent.com/orlandojrps/stream/0e63fdd22c7dfa974e221319fb4ca60acc174d8f/teste.jpg").resize((32, 32))
+    price_icon = Image.open("https://raw.githubusercontent.com/orlandojrps/stream/0e63fdd22c7dfa974e221319fb4ca60acc174d8f/teste.jpgg").resize((32, 32))
 
+   
 
     st.write(styler, unsafe_allow_html=True)
     
