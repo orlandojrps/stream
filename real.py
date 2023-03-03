@@ -37,11 +37,11 @@ def geocode_and_plot_addresses(df):
         'Highest Price': '${:.2f}'
     })
 
-    house_icon = Image.open('https://cdn-icons-png.flaticon.com/512/25/25694.png').resize((32, 32))
-    price_icon = Image.open('https://cdn-icons-png.flaticon.com/512/25/25694.png').resize((32, 32))
+    house_icon = Image.open('https://raw.githubusercontent.com/orlandojrps/stream/dfc4ac234bb03008613f5ab99ec4146339218e5c/25694.png').resize((32, 32))
+    price_icon = Image.open('https://raw.githubusercontent.com/orlandojrps/stream/dfc4ac234bb03008613f5ab99ec4146339218e5c/25694.png').resize((32, 32))
 
     styler.add_rows([
-        ['<img src="https://cdn-icons-png.flaticon.com/512/25/25694.png,{}"/> Number of Houses'.format(house_icon), num_houses]
+        ['<img src="https://raw.githubusercontent.com/orlandojrps/stream/dfc4ac234bb03008613f5ab99ec4146339218e5c/25694.png,{}"/> Number of Houses'.format(house_icon), num_houses]
     ])
 
     st.write(styler, unsafe_allow_html=True)
