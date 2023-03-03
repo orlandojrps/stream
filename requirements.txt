@@ -2,3 +2,4 @@ streamlit
 pandas
 folium
 geopy
+Nominatim
