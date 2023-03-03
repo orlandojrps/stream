@@ -23,6 +23,14 @@ def geocode_and_plot_addresses(df):
     
     # create a table with the summary statistics
     summary_table = pd.DataFrame({
+        'Number of Houses': [num_houses],
+        'Average Price': [avg_price],
+        'Lowest Price': [lowest_price],
+        'Highest Price': [highest_price]
+    })
+    
+    # create a streamlit table and add it to the interface
+      summary_table = pd.DataFrame({
         ' ': [st.image('https://img.icons8.com/material-outlined/24/000000/house.png')],
         'Number of Houses': [num_houses],
         ' ': [st.image('https://img.icons8.com/material-outlined/24/000000/price-tag.png')],
@@ -33,12 +41,6 @@ def geocode_and_plot_addresses(df):
         'Highest Price': [highest_price]
     })
     
-    # create a streamlit table and add it to the interface
-    st.table(summary_table.style.format({
-        'Average Price': '${:.2f}',
-        'Lowest Price': '${:.2f}',
-        'Highest Price': '${:.2f}'
-    }))
     
     # plot the coordinates on a map using Folium
     map_center = [51.897928, -8.470579] # center the map on Cork City
