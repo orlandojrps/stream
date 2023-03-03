@@ -23,9 +23,13 @@ def geocode_and_plot_addresses(df):
     
     # create a table with the summary statistics
     summary_table = pd.DataFrame({
+        ' ': [st.image('https://img.icons8.com/material-outlined/24/000000/house.png')],
         'Number of Houses': [num_houses],
+        ' ': [st.image('https://img.icons8.com/material-outlined/24/000000/price-tag.png')],
         'Average Price': [avg_price],
+        ' ': [st.image('https://img.icons8.com/material-outlined/24/000000/price.png')],
         'Lowest Price': [lowest_price],
+        ' ': [st.image('https://img.icons8.com/material-outlined/24/000000/high-price.png')],
         'Highest Price': [highest_price]
     })
     
