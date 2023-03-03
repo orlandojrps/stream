@@ -7,7 +7,7 @@ import pandas as pd
 
 # Função para plotar mapa
 def geocode_and_plot_addresses(df):
-    geolocator = Nominatim(user_agent='my-application') # criar objeto geolocator
+    geolocator = Nominatim(user_agent='meu-novo-user-agent')
     addresses = df['Address'].tolist() # extrair endereços do DataFrame
     lats = []
     longs = []
