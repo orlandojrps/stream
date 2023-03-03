@@ -14,8 +14,7 @@ def geocode_and_plot_addresses(df):
         for address in addresses:
            geolocator = Nominatim(user_agent='user-my-application') # create a geolocator object
            addresses = df['Address'].head(9).tolist() # extract addresses from DataFrame 
-           lats = []
-           longs = []
+          
     
     # loop over addresses, geocode each one, and extract the latitude and longitude
         for address in addresses:
