@@ -22,12 +22,7 @@ def geocode_and_plot_addresses(df):
     highest_price = df['Price'].max()
     
     # create a table with the summary statistics
-    summary_table = pd.DataFrame({
-        'Number of Houses': [num_houses],
-        'Average Price': [avg_price],
-        'Lowest Price': [lowest_price],
-        'Highest Price': [highest_price]
-    })
+    summary_table = pd.DataFrame({'Number of Houses': [num_houses],'Average Price': [avg_price],'Lowest Price': [lowest_price],'Highest Price': [highest_price]})
     
     # create a streamlit table and add it to the interface
       summary_table = pd.DataFrame({
