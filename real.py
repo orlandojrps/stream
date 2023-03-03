@@ -29,7 +29,8 @@ def geocode_and_plot_addresses(df):
 
     # create a streamlit table and add it to the interface
     st.table(summary_table)
-
+    # add the map to the interface
+    st.write(m._repr_html_(), unsafe_allow_html=True)
 
 # Load the DataFrame
 df = pd.read_csv('https://raw.githubusercontent.com/orlandojrps/stream/main/df_final.csv')
