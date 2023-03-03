@@ -12,11 +12,17 @@ def geocode_and_plot_addresses(df):
     
     # loop over addresses, geocode each one, and extract the latitude and longitude
     for address in addresses:
-       location = geolocator.geocode(address)
-       lats.append(location.latitude)
-       longs.append(location.longitude)
-       time.sleep(1.1) # add a 1.1-second interval between requests
-        
+       geolocator = Nominatim(user_agent='user-my-application') # create a geolocator object
+       addresses = df['Address'].head(9).tolist() # extract addresses from DataFrame 
+       lats = []
+       longs = []
+    
+    # loop over addresses, geocode each one, and extract the latitude and longitude
+    for address in addresses:
+        location = geolocator.geocode(address)
+        time.sleep(0) # add a 1.1-second interval between requests
+       
+    
        # calculate summary statistics
        num_houses = df['Price'].count()
        avg_price = df['Price'].mean()
