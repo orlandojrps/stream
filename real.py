@@ -31,7 +31,7 @@ def geocode_and_plot_addresses(df):
         })
         # create a streamlit table and add it to the interface
         st.table(summary_table.style.format({
-            'Average Price': '${:.2f}',
+            'Average Price': '${:.2f} : 'teste'',
             'Lowest Price': '${:.2f}',
             'Highest Price': '${:.2f}'
         }))
