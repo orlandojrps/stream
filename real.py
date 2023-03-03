@@ -39,6 +39,6 @@ filtered_df = df[df['city_area'] == city_area]
 
 # Criar botão para plotar endereços no mapa
 if st.button('Plotar endereços no mapa'):
-    map = geocode_and_plot_addresses(filtered_df.head(2))
+    map = geocode_and_plot_addresses(filtered_df.head(9))
     # Adicionar mapa na interface
     st.write(map._repr_html_(), unsafe_allow_html=True)
