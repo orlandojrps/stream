@@ -5,49 +5,46 @@ from geopy.geocoders import Nominatim
 import time
 
 def geocode_and_plot_addresses(df):
-        geolocator = Nominatim(user_agent='user-my-application') # create a geolocator object
-        addresses = df['Address'].head(9).tolist() # extract addresses from DataFrame 
-        lats = []
-        longs = []
+    geolocator = Nominatim(user_agent='user-my-application') # create a geolocator object
+    addresses = df['Address'].head(9).tolist() # extract addresses from DataFrame 
+    lats = []
+    longs = []
     
     # loop over addresses, geocode each one, and extract the latitude and longitude
-        for address in addresses:
-            location = geolocator.geocode(address)
-            time.sleep(0) # add a 1.1-second interval between requests
-       
+    for address in addresses:
+        location = geolocator.geocode(address)
+        time.sleep(0) # add a 1.1-second interval between requests
     
-       # calculate summary statistics
-        num_houses = df['Price'].count()
-        avg_price = df['Price'].mean()
-        lowest_price = df['Price'].min()
-        highest_price = df['Price'].max()
-        
-        # create a table with the summary statistics
-        summary_table = pd.DataFrame({
-            'Number of Houses': [num_houses],
-            'Average Price': [avg_price],
-            'Lowest Price': [lowest_price],
-            'Highest Price': [highest_price]
-        })
-        # create a streamlit table and add it to the interface
-        st.table(summary_table.style.format({
-            'Average Price': '${:.2f} : 'teste'',
-            'Lowest Price': '${:.2f}',
-            'Highest Price': '${:.2f}'
-        }))
-        
-        # create a streamlit table and add it to the interface
-        
-        
-        # plot the coordinates on a map using Folium
-        map_center = [51.897928, -8.470579] # center the map on Cork City
-        m = folium.Map(location=map_center, zoom_start=12)
-        for i, row in df.iterrows():
-                if row['Latitude'] and row['Longitude']:
-                        folium.Marker([row['Latitude'], row['Longitude']], popup=row['Address']).add_to(m)
+    # calculate summary statistics
+    num_houses = df['Price'].count()
+    avg_price = df['Price'].mean()
+    lowest_price = df['Price'].min()
+    highest_price = df['Price'].max()
+    
+    # create a table with the summary statistics
+    summary_table = pd.DataFrame({
+        'Number of Houses': [num_houses],
+        'Average Price': [avg_price],
+        'Lowest Price': [lowest_price],
+        'Highest Price': [highest_price]
+    })
+    
+    # create a streamlit table and add it to the interface
+    st.table(summary_table.style.format({
+        'Average Price': '${:.2f}',
+        'Lowest Price': '${:.2f}',
+        'Highest Price': '${:.2f}'
+    }))
+    
+    # plot the coordinates on a map using Folium
+    map_center = [51.897928, -8.470579] # center the map on Cork City
+    m = folium.Map(location=map_center, zoom_start=12)
+    for i, row in df.iterrows():
+        if row['Latitude'] and row['Longitude']:
+            folium.Marker([row['Latitude'], row['Longitude']], popup=row['Address']).add_to(m)
 
     # add the map to the interface
-        st.write(m._repr_html_(), unsafe_allow_html=True)
+    st.write(m._repr_html_(), unsafe_allow_html=True)
 
 # Load the DataFrame
 df = pd.read_csv('https://raw.githubusercontent.com/orlandojrps/stream/main/df_final.csv')
