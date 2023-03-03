@@ -3,3 +3,4 @@ pandas
 folium
 geopy
 Nominatim
+branca==0.3.1
