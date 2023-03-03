@@ -41,10 +41,10 @@ def geocode_and_plot_addresses(df):
     price_icon = Image.open('https://cdn-icons-png.flaticon.com/512/25/25694.png').resize((32, 32))
 
     styler.add_rows([
-        ['<img src="data:image/png;base64,{}"/> Number of Houses'.format(house_icon), num_houses],
-        ['<img src="data:image/png;base64,{}"/> Average Price'.format(price_icon), '${:.2f}'.format(avg_price)],
-        ['<img src="data:image/png;base64,{}"/> Lowest Price'.format(price_icon), '${:.2f}'.format(lowest_price)],
-        ['<img src="data:image/png;base64,{}"/> Highest Price'.format(price_icon), '${:.2f}'.format(highest_price)]
+        ['<img src="https://cdn-icons-png.flaticon.com/512/25/25694.png,{}"/> Number of Houses'.format(house_icon), num_houses],
+        ['<img src="https://cdn-icons-png.flaticon.com/512/25/25694.png,{}"/> Average Price'.format(price_icon), '${:.2f}'.format(avg_price)],
+        ['<img src="https://cdn-icons-png.flaticon.com/512/25/25694.png,{}"/> Lowest Price'.format(price_icon), '${:.2f}'.format(lowest_price)],
+        ['<img src="https://cdn-icons-png.flaticon.com/512/25/25694.png,{}"/> Highest Price'.format(price_icon), '${:.2f}'.format(highest_price)]
     ])
 
     st.write(styler, unsafe_allow_html=True)
