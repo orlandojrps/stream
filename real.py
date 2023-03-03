@@ -15,7 +15,7 @@ def geocode_and_plot_addresses(df):
     # loop sobre endereços, geocodificar cada um, e extrair a latitude e longitude
     for address in addresses:
         location = geolocator.geocode(address)
-        time.sleep(2) # adicionar um intervalo de 2 segundos entre as solicitações
+        time.sleep(10) # adicionar um intervalo de 2 segundos entre as solicitações
     
         if location:
             lats.append(location.latitude)
