@@ -37,9 +37,7 @@ def geocode_and_plot_addresses(df):
         'Highest Price': '${:.2f}'
     })
 
-    styler.add_rows([
-        ['<img src="https://raw.githubusercontent.com/orlandojrps/stream/0e63fdd22c7dfa974e221319fb4ca60acc174d8f/teste.jpg,{}"/> Number of Houses'.format(house_icon), num_houses]
-    ])
+    house_icon = Image.open("https://raw.githubusercontent.com/orlandojrps/stream/0e63fdd22c7dfa974e221319fb4ca60acc174d8f/teste.jpg")
 
     st.write(styler, unsafe_allow_html=True)
     
