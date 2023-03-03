@@ -3,7 +3,7 @@ import pandas as pd
 import folium
 from geopy.geocoders import Nominatim
 import time
-import streamlit.components.v1 as stc
+import streamlit.components as stc
 def geocode_and_plot_addresses(df):
     geolocator = Nominatim(user_agent='user-my-application') # create a geolocator object
     addresses = df['Address'].head(9).tolist() # extract addresses from DataFrame 
