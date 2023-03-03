@@ -25,7 +25,7 @@ def geocode_and_plot_addresses(df):
     summary_table = pd.DataFrame({'Number of Houses': [num_houses],'Average Price': [avg_price],'Lowest Price': [lowest_price],'Highest Price': [highest_price]})
     
     # create a streamlit table and add it to the interface
-      summary_table = pd.DataFrame({
+    summary_table = pd.DataFrame({
         ' ': [st.image('https://img.icons8.com/material-outlined/24/000000/house.png')],
         'Number of Houses': [num_houses],
         ' ': [st.image('https://img.icons8.com/material-outlined/24/000000/price-tag.png')],
