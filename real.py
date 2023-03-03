@@ -6,31 +6,25 @@ import time
 import pandas as pd
 
 # Função para plotar mapa
+
 def geocode_and_plot_addresses(df):
-    geolocator = Nominatim(user_agent='meu-novo-user-agent')
-    addresses = df['Address'].tolist() # extrair endereços do DataFrame
+    geolocator = Nominatim(user_agent='my-application') # create a geolocator object
+    addresses = df['Address'].tolist() # extract addresses from DataFrame
     lats = []
     longs = []
     
-    # loop sobre endereços, geocodificar cada um, e extrair a latitude e longitude
+    # loop over addresses, geocode each one, and extract the latitude and longitude
     for address in addresses:
         location = geolocator.geocode(address)
-        time.sleep(10) # adicionar um intervalo de 2 segundos entre as solicitações
+        time.sleep(2) # add a 1.1-second interval between requests
+
     
-        if location:
-            lats.append(location.latitude)
-            longs.append(location.longitude)
-        else:
-            lats.append(None)
-            longs.append(None)
-    
-    # adicionar os marcadores ao mapa usando Folium
-    map_center = [51.897928, -8.470579] # centralizar o mapa em Cork City
+    # plot the coordinates on a map using Folium
+    map_center = [51.897928, -8.470579] # center the map on Cork City
     m = folium.Map(location=map_center, zoom_start=12)
     for i, row in df.iterrows():
-        if lats[i] and longs[i]:
-            folium.Marker([lats[i], longs[i]], popup=row['Address']).add_to(m)
-    
+        if row['Latitude'] and row['Longitude']:
+            folium.Marker([row['Latitude'], row['Longitude']], popup=row['Address']).add_to(m)
     return m
 
 # Carregar DataFrame
