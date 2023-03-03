@@ -1,17 +1,2 @@
 streamlit
 pandas
-textblob
-snscrape
-transformers
-torch
-Nominatim
-geopy
-plotly
-folium
-#folium_static
-scipy
-matplotlib
-seaborn
-joblib
-#scikit-learn 
-scikit-learn==1.1.1
