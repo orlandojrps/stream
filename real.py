@@ -8,6 +8,8 @@ from streamlit.proto.Image_pb2 import Image as ImageProto
 from PIL import Image
 from io import BytesIO
 import base64
+from streamlit.proto.Image_pb2 import Image as ImageProto
+
 
 def geocode_and_plot_addresses(df):
     geolocator = Nominatim(user_agent='user-my-application') # create a geolocator object
