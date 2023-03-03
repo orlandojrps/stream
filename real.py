@@ -8,7 +8,7 @@ import pandas as pd
  
 def geocode_and_plot_addresses(df):
     geolocator = Nominatim(user_agent='user-my-application') # create a geolocator object
-    addresses = df['Address'].tolist() # extract addresses from DataFrame 
+    addresses = df['Address'].head(9).tolist() # extract addresses from DataFrame 
     lats = []
     longs = []
     
@@ -43,6 +43,6 @@ filtered_df = df[df['city_area'] == city_area]
 
 # Create a button to plot addresses on the map
 if st.button('Plot addresses on the map'):
-    geocode_and_plot_addresses(filtered_df.head(9))
+    geocode_and_plot_addresses(filtered_df)
 
     
