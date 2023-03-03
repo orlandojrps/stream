@@ -4,23 +4,23 @@ import folium
 from geopy.geocoders import Nominatim
 import time
 
-def geocode_and_plot_addresses(df):
-    geolocator = Nominatim(user_agent='user-my-application') # create a geolocator object
-    addresses = df['Address'].head(9).tolist() # extract addresses from DataFrame 
-    lats = []
-    longs = []
+    def geocode_and_plot_addresses(df):
+        geolocator = Nominatim(user_agent='user-my-application') # create a geolocator object
+        addresses = df['Address'].head(9).tolist() # extract addresses from DataFrame 
+        lats = []
+        longs = []
+
+    # loop over addresses, geocode each one, and extract the latitude and longitude
+        for address in addresses:
+           geolocator = Nominatim(user_agent='user-my-application') # create a geolocator object
+           addresses = df['Address'].head(9).tolist() # extract addresses from DataFrame 
+           lats = []
+           longs = []
     
     # loop over addresses, geocode each one, and extract the latitude and longitude
-    for address in addresses:
-       geolocator = Nominatim(user_agent='user-my-application') # create a geolocator object
-       addresses = df['Address'].head(9).tolist() # extract addresses from DataFrame 
-       lats = []
-       longs = []
-    
-    # loop over addresses, geocode each one, and extract the latitude and longitude
-    for address in addresses:
-        location = geolocator.geocode(address)
-        time.sleep(0) # add a 1.1-second interval between requests
+        for address in addresses:
+            location = geolocator.geocode(address)
+            time.sleep(0) # add a 1.1-second interval between requests
        
     
        # calculate summary statistics
