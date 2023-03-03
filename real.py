@@ -31,11 +31,7 @@ def geocode_and_plot_addresses(df):
         })
         
         # create a streamlit table and add it to the interface
-        st.table(summary_table.style.format({
-            'Average Price': '${:.2f}',
-            'Lowest Price': '${:.2f}',
-            'Highest Price': '${:.2f}'
-        }))
+        
         
         # plot the coordinates on a map using Folium
         map_center = [location.latitude, location.longitude] # center the map on the first address
