@@ -3,6 +3,7 @@ import pandas as pd
 import folium
 from geopy.geocoders import Nominatim
 import time
+from PIL import Image
 
 def geocode_and_plot_addresses(df):
     geolocator = Nominatim(user_agent='user-my-application') # create a geolocator object
@@ -30,11 +31,23 @@ def geocode_and_plot_addresses(df):
     })
     
     # create a streamlit table and add it to the interface
-    st.table(summary_table.style.format({
+    styler = summary_table.style.format({
         'Average Price': '${:.2f}',
         'Lowest Price': '${:.2f}',
         'Highest Price': '${:.2f}'
-    }))
+    })
+
+    house_icon = Image.open('house.png').resize((32, 32))
+    price_icon = Image.open('price.png').resize((32, 32))
+
+    styler.add_rows([
+        ['<img src="data:image/png;base64,{}"/> Number of Houses'.format(house_icon), num_houses],
+        ['<img src="data:image/png;base64,{}"/> Average Price'.format(price_icon), '${:.2f}'.format(avg_price)],
+        ['<img src="data:image/png;base64,{}"/> Lowest Price'.format(price_icon), '${:.2f}'.format(lowest_price)],
+        ['<img src="data:image/png;base64,{}"/> Highest Price'.format(price_icon), '${:.2f}'.format(highest_price)]
+    ])
+
+    st.write(styler, unsafe_allow_html=True)
     
     # plot the coordinates on a map using Folium
     map_center = [51.897928, -8.470579] # center the map on Cork City
