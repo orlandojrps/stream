@@ -164,7 +164,22 @@ col4.markdown(metric_html + metric_html2, unsafe_allow_html=True)
 
 metric_col0 = f"<div style='font-size: 24px; font-weight: bold; color:#000000;'>Number Houses (Qty):</div>"
 col0.markdown(metric_col0, unsafe_allow_html=True)
-col0.metric("", f" {n_houses:}", " ")
+#col0.metric("", f" {n_houses:}", " ")
+
+# Adicionar o valor de n_houses e o ícone da casa
+value = f"{n_houses} <i class='fas fa-home'></i>"
+components.html(f"<div style='font-size: 20px;'>{value}</div>", height=60)
+
+# Adicionar a biblioteca Font Awesome
+components.html(
+    """
+    <script src="https://kit.fontawesome.com/abfb570c8c.js" crossorigin="anonymous"></script>
+    """,
+    height=0,
+)
+
+
+
 #col1m, col2m = st.columns(2)
 #metric_html = f"<div style='font-size: 18px; font-weight: bold;'>Min (Qty):  {min_baths:}</div>"
 #metric_html2 = f"<div style='font-size: 18px; font-weight: bold;'>Max (Qty):  {max_baths:}</div>"
