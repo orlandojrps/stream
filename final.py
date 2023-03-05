@@ -92,6 +92,8 @@ min_baths = df_filtered['Baths'].min()
 # Calculando max para o dataframe filtrado
 max_baths = df_filtered['Baths'].max()
 
+# Calculando count
+n_houses = df_filtered['Baths'].count()
 
 st.markdown(
     """
@@ -105,7 +107,7 @@ st.markdown(
 )
 # Row A
 st.markdown('### Metrics: '+ df_city_area)
-col1, col2,col3, col4,col6 = st.columns(5)
+col0,col1, col2,col3, col4 = st.columns(5)
 metric_html0 = f"<div style='font-size: 24px; font-weight: bold;'>Average Price:</div>"
 col1.markdown(metric_html0, unsafe_allow_html=True)
 col1.metric("", f"€ {avg_price:,.2f}", " ")
@@ -158,7 +160,19 @@ col1m, col2m = st.columns(2)
 col4.markdown(metric_html + metric_html2, unsafe_allow_html=True)
 
 ##################################
+###############################
 
+metric_col0 = f"<div style='font-size: 24px; font-weight: bold;'>Number Houses (Qty):</div>"
+col0.markdown(metric_col0, unsafe_allow_html=True)
+col0.metric("", f" {n_houses:}", " ")
+#col1m, col2m = st.columns(2)
+#metric_html = f"<div style='font-size: 18px; font-weight: bold;'>Min (Qty):  {min_baths:}</div>"
+#metric_html2 = f"<div style='font-size: 18px; font-weight: bold;'>Max (Qty):  {max_baths:}</div>"
+
+#col1m, col2m = st.columns(2)
+#col4.markdown(metric_html + metric_html2, unsafe_allow_html=True)
+
+##################################
 
 
 
