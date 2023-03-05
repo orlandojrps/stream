@@ -236,6 +236,10 @@ st.write(f'<a href="{map_url}" target="_blank">Click here to view map</a>', unsa
 #<iframe src="https://maps.google.com/maps?q=Tangesir%20Dates%20Products&amp;t=&amp;z=13&amp;ie=UTF8&amp;iwloc=&amp;output=embed" width=300 height=150 allowfullscreen></iframe>
 
 
+
+street_view_url = 'https://www.instantstreetview.com/@51.902544,-8.478546,-7.89h,0p,0z,t3TYjiEEK68_KwPyXNtsJA'
+st.markdown(f'<iframe src="{street_view_url}" width="1000" height="500"></iframe>', unsafe_allow_html=True)
+
 # Row C
 st.markdown('### Line chart')
 st.line_chart(seattle_weather, x = 'date', y = plot_data, height = plot_height)
