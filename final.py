@@ -32,10 +32,18 @@ with open('style.css') as f:
 st.sidebar.header('Real Estate Market `Cork City v. 0.1`')
 st.sidebar.image("https://raw.githubusercontent.com/orlandojrps/stream/main/map.jpg", use_column_width=True)
 
-# Adicionando filtro para selecionar df.city_area
-df_city_area = st.sidebar.selectbox('Select City Area', df['city_area'].unique())
+# Adicionando opção "Todos" à lista de áreas da cidade
+city_areas = list(df['city_area'].unique())
+city_areas.insert(0, "Todos")
 
+# Criando o filtro para selecionar a área da cidade
+df_city_area = st.sidebar.selectbox('Select City Area', city_areas)
 
+# Filtrando o dataframe com base na área selecionada
+if df_city_area == "Todos":
+    filtered_df = df
+else:
+    filtered_df = df[df['city_area'] == df_city_area]
 st.sidebar.subheader('Heat map parameter')
 time_hist_color = st.sidebar.selectbox('Color by', ['temp_min', 'temp_max', 'city_area']) 
 
