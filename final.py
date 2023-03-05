@@ -281,7 +281,7 @@ for index, row in df.iterrows():
     )
 
     
-st.write(html_component)
+#st.write(html_component)
 
 
 
