@@ -12,7 +12,7 @@
 /* Adapted from https://startbootstrap.com/theme/sb-admin-2 */
 
 div.css-j5r0tf.e1tzin5v2{
- background-color: red ;
+  background-image: linear-gradient(to bottom, #0080ff, #00bfff);
  border: 2px solid;
  padding: 20px 20px 20px 20px;
  border-radius: 10px;
