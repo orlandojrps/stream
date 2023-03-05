@@ -177,30 +177,7 @@ stocks = pd.read_csv('https://raw.githubusercontent.com/dataprofessor/data/maste
 c1, c2 = st.columns((7,3))
 with c1:
     st.markdown('### Heatmap')
-    plost.time_hist(
-    data=seattle_weather,
-    date='date',
-    x_unit='week',
-    y_unit='day',
-    color=time_hist_color,
-    aggregate='median',
-    legend=None,
-    height=345,
-    use_container_width=True)
-with c2:
-    st.markdown('### Donut chart')
-    plost.donut_chart(
-        data=stocks,
-        theta=donut_theta,
-        color='company',
-        legend='bottom', 
-        use_container_width=True)
-
-# Row C
-st.markdown('### Line chart')
-st.line_chart(seattle_weather, x = 'date', y = plot_data, height = plot_height)
-
- 
+    
  
 def geocode_and_plot_addresses(df):
     geolocator = Nominatim(user_agent='user-my-application') # create a geolocator object
@@ -260,3 +237,27 @@ filtered_df = df[df['city_area'] == city_area]
 # Create a button to plot addresses on the map
 if st.button('Plot addresses on the map'):
     geocode_and_plot_addresses(filtered_df)
+    plost.time_hist(
+    data=seattle_weather,
+    date='date',
+    x_unit='week',
+    y_unit='day',
+    color=time_hist_color,
+    aggregate='median',
+    legend=None,
+    height=345,
+    use_container_width=True)
+with c2:
+    st.markdown('### Donut chart')
+    plost.donut_chart(
+        data=stocks,
+        theta=donut_theta,
+        color='company',
+        legend='bottom', 
+        use_container_width=True)
+
+# Row C
+st.markdown('### Line chart')
+st.line_chart(seattle_weather, x = 'date', y = plot_data, height = plot_height)
+
+ 
