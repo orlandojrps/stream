@@ -200,40 +200,8 @@ with c2:
 st.markdown('### Line chart')
 st.line_chart(seattle_weather, x = 'date', y = plot_data, height = plot_height)
 
-#!streamlit run /content/app.py &>/content/logs.txt &
-
-#!npx localtunnel --port 8501
-
-
-
-
-
-
-
-
-
-
-
-
-
-'''
-# Filtrando dataframe df com base em df_city_area selecionado
-df_filtered = df[df['city_area'] == "Cork City North East"]
-
-# Calculando média do campo df.price para o dataframe filtrado
-avg_price = df_filtered['Price'].mean()
-#st.markdown(f"Average Price: ${avg_price:,.2f}")
-
-#df_filtered.describe()
-
-'''
-import streamlit as st
-import pandas as pd
-import folium
-from geopy.geocoders import Nominatim
-import time
-from PIL import Image
-
+ 
+ 
 def geocode_and_plot_addresses(df):
     geolocator = Nominatim(user_agent='user-my-application') # create a geolocator object
     addresses = df['Address'].head(9).tolist() # extract addresses from DataFrame 
@@ -266,7 +234,7 @@ def geocode_and_plot_addresses(df):
         'Highest Price': '${:.2f}'
     })
 
-    house_icon = Image.open("https://raw.githubusercontent.com/orlandojrps/stream/0e63fdd22c7dfa974e221319fb4ca60acc174d8f/teste.jpg")
+    #house_icon = Image.open("https://raw.githubusercontent.com/orlandojrps/stream/0e63fdd22c7dfa974e221319fb4ca60acc174d8f/teste.jpg")
 
     st.write(styler, unsafe_allow_html=True)
     
@@ -281,7 +249,7 @@ def geocode_and_plot_addresses(df):
     st.write(m._repr_html_(), unsafe_allow_html=True)
 
 # Load the DataFrame
-df = pd.read_csv('https://raw.githubusercontent.com/orlandojrps/stream/main/df_final.csv')
+#df = pd.read_csv('https://raw.githubusercontent.com/orlandojrps/stream/main/df_final.csv')
 
 # Create input to select city_area
 city_area = st.selectbox('Select a city_area', df['city_area'].unique())
