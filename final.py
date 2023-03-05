@@ -49,7 +49,7 @@ plot_height = st.sidebar.slider('Specify plot height', 200, 500, 250)
 
 st.sidebar.markdown('''
 ---
-Created with ❤️ by [Data Professor](https://youtube.com/dataprofessor/).
+Created by Orlando).
 ''')
 
 
@@ -171,10 +171,11 @@ col4.markdown(metric_html + metric_html2, unsafe_allow_html=True)
 
 
 # Row B
+
 seattle_weather = pd.read_csv('https://raw.githubusercontent.com/tvst/plost/master/data/seattle-weather.csv', parse_dates=['date'])
 stocks = pd.read_csv('https://raw.githubusercontent.com/dataprofessor/data/master/stocks_toy.csv')
 
-c1, c2 = st.columns((5,5))
+c1, c2 = st.columns(7,3)
 with c1:
     st.markdown('### Heatmap')
     
@@ -192,7 +193,7 @@ def geocode_and_plot_addresses(df):
     # plot the coordinates on a map using Folium
     map_center = [51.897928, -8.470579] # center the map on Cork City
     #m = folium.Map(location=map_center, zoom_start=12)
-    m = folium.Map(location=map_center, zoom_start=16, height=250, width=350)
+    m = folium.Map(location=map_center, zoom_start=13, height=400, width=400)
     for i, row in df.iterrows():
         if row['Latitude'] and row['Longitude']:
             folium.Marker([row['Latitude'], row['Longitude']], popup=row['Address']).add_to(m)
