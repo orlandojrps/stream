@@ -244,20 +244,22 @@ st.write(f'<a href="{map_url}" target="_blank">Click here to view map</a>', unsa
 
 
  
+# Load jQuery library
+def load_jquery():
+    jquery_url = "https://code.jquery.com/jquery-3.5.1.min.js"
+    return f'<script src="{jquery_url}"></script>'
+st.markdown(load_jquery(), unsafe_allow_html=True)
 
 # Function to create popup window with link to Google Street View
 def street_view_popup(lat, lng):
     street_view_url = f"https://www.google.com/maps/@?api=1&map_action=pano&viewpoint={lat},{lng}"
     return f"""
-        <script>
-            function openPopup() {{
-                var popupWindow = window.open("{street_view_url}", "Google Street View", "width=800,height=600");
-                if (window.focus) {{
-                    popupWindow.focus();
-                }}
-            }};
-        </script>
-        <button onclick="openPopup()">View Street View</button>
+        function() {{
+            var popupWindow = window.open("{street_view_url}", "Google Street View", "width=800,height=600");
+            if (window.focus) {{
+                popupWindow.focus();
+            }}
+        }}
         """
 
 # Example data
@@ -268,12 +270,11 @@ df = pd.DataFrame({
 
 # Add button for each row to open Street View
 for index, row in df.iterrows():
-    st.markdown(street_view_popup(row['Lat'], row['Lng']), unsafe_allow_html=True)
-
-
-
-
-
+    st.button(
+        label=f"View Street View of location {index + 1}",
+        on_click=street_view_popup(row['Lat'], row['Lng']),
+        help="Click to view the Google Street View of this location"
+    )
 
 
 
