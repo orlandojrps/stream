@@ -34,14 +34,14 @@ st.sidebar.image("https://raw.githubusercontent.com/orlandojrps/stream/main/map.
 
 # Adicionando opção "Todos" à lista de áreas da cidade
 city_areas = list(df['city_area'].unique())
-city_areas.insert(0, "Todos")
+city_areas.insert(0, "ALL")
 
 # Criando o filtro para selecionar a área da cidade
 df_city_area = st.sidebar.selectbox('Select City Area', city_areas)
 
 # Filtrando o dataframe com base na área selecionada
-if df_city_area == "Todos":
-    filtered_df = df
+if df_city_area == "ALL":
+    filtered_df = df[df['city_area'] != ""]
 else:
     filtered_df = df[df['city_area'] == df_city_area]
 st.sidebar.subheader('Heat map parameter')
