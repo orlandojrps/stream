@@ -40,10 +40,10 @@ city_areas.insert(0, "ALL")
 df_city_area = st.sidebar.selectbox('Select City Area', city_areas)
 
 # Filtrando o dataframe com base na área selecionada
-if df_city_area == "ALL":
-    filtered_df = df[df['city_area'] == "Cork City South Central"]
-else:
-    filtered_df = df[df['city_area'] == df_city_area]
+#if df_city_area == "ALL":
+ #   filtered_df = df[df['city_area'] == "Cork City South Central"]
+#else:
+ #   filtered_df = df[df['city_area'] == df_city_area]
 st.sidebar.subheader('Heat map parameter')
 time_hist_color = st.sidebar.selectbox('Color by', ['temp_min', 'temp_max', 'city_area']) 
 
