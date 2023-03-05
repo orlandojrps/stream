@@ -228,14 +228,14 @@ def geocode_and_plot_addresses(df):
 #df = pd.read_csv('https://raw.githubusercontent.com/orlandojrps/stream/main/df_final.csv')
 
 # Create input to select city_area
-city_area = st.selectbox('Select a city_area', df['city_area'].unique())
+#city_area = st.selectbox('Select a city_area', df['city_area'].unique())
 
 # Filter the DataFrame based on the selected city_area
-filtered_df = df[df['city_area'] == city_area]
+#filtered_df = df[df['city_area'] == city_area]
 
 # Create a button to plot addresses on the map
 if st.button('Plot addresses on the map'):
-    geocode_and_plot_addresses(filtered_df)
+    geocode_and_plot_addresses(df_filtered)
     plost.time_hist(
     data=seattle_weather,
     date='date',
