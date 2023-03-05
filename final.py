@@ -225,7 +225,8 @@ with c2:
         #use_container_width=True)
 
 #ap_url = 'https://www.google.com/maps/@51.9011024,-8.4941951,3a,75y,254.1h,90t/data=!3m7!1e1!3m5!1sAF1QipOz-BpF13JhlgTmgHuyBHQE7VnJv6uNE7-UUfL6!2e10!3e12!7i16384!8i8192'
-map_url = 'https://maps.google.com/maps?q=Tangesir%20Dates%20Products&amp;t=&amp;z=13&amp;ie=UTF8&amp;iwloc=&amp;output=embed'
+#map_url = 'https://maps.google.com/maps?q=Tangesir%20Dates%20Products&amp;t=&amp;z=13&amp;ie=UTF8&amp;iwloc=&amp;output=embed'
+map_url = 'https://www.instantstreetview.com/@51.902544,-8.478546,-7.89h,0p,0z,t3TYjiEEK68_KwPyXNtsJA'
 
 st.write(f'<iframe src="{map_url}" width="1000" height="500"></iframe>', unsafe_allow_html=True)
 map_url = 'https://www.google.com/maps/@51.9011024,-8.4941951,3a,75y,254.1h,90t/data=!3m7!1e1!3m5!1sAF1QipOz-BpF13JhlgTmgHuyBHQE7VnJv6uNE7-UUfL6!2e10!3e12!7i16384!8i8192'
