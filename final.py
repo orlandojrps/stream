@@ -86,20 +86,30 @@ col1.markdown(metric_html0, unsafe_allow_html=True)
 col1.metric("", f"€ {avg_price:,.2f}", " ")
 
  
-
-#st.markdown('### Metrics2')
 col1m, col2m = st.columns(2)
 metric_html = f"<div style='font-size: 18px; font-weight: bold;'>Min Price: € {min_price:,.2f}</div>"
 metric_html2 = f"<div style='font-size: 18px; font-weight: bold;'>Max Price: € {max_price:,.2f}</div>"
 
+col1m, col2m = st.columns(2)
+col1.markdown(metric_html + metric_html2, unsafe_allow_html=True)
 
-col2.metric("Average Area (m2)", f"${avg_area:,.2f}", "1.2 °F")
+metric_col2 = f"<div style='font-size: 24px; font-weight: bold;'>Average Area (m2):</div>"
+col2.markdown(metric_col2, unsafe_allow_html=True)
+col2.metric("", f" {avg_area:,.2f}", " ")
+
+
+
+
 col3.metric("Humidity", "86%", "4%")
 col5.metric("Humidity", "86%", "4%")
 col6.metric("Humidity", "86%", "4%")
 
-col1m, col2m = st.columns(2)
-col1.markdown(metric_html + metric_html2, unsafe_allow_html=True)
+
+
+
+
+
+
 
 # Row B
 seattle_weather = pd.read_csv('https://raw.githubusercontent.com/tvst/plost/master/data/seattle-weather.csv', parse_dates=['date'])
