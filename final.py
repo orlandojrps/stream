@@ -172,11 +172,11 @@ col4.markdown(metric_html + metric_html2, unsafe_allow_html=True)
     
     
     
-metric_col0 = "<div style='font-size: 24px; font-weight: bold;'>Number Houses (Qty):</div>"
+metric_col0 = "<div style='font-size: 24px; font-weight: bold;'>Number Houses:</div>"
 col0.markdown(metric_col0, unsafe_allow_html=True)
 
 # Adicionar o valor de n_houses e o ícone da casa
-value = f"{n_houses} \U0001F3E0"
+value = f"{n_houses} \U+1F3E1"
 col0.markdown(f"<div style='font-size: 64px;'>{value}</div>", unsafe_allow_html=True)
 
 
