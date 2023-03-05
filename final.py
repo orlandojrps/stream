@@ -163,11 +163,23 @@ col4.markdown(metric_html + metric_html2, unsafe_allow_html=True)
 ##################################
 ###############################
 
-metric_col0 = f"<div style='font-size: 24px; font-weight: bold; color:#000000;'>Number Houses (Qty):</div>"
-col0.markdown(metric_col0, unsafe_allow_html=True)
-col0.metric("", f" {n_houses:}", " ")
+#metric_col0 = f"<div style='font-size: 24px; font-weight: bold; color:#000000;'>Number Houses (Qty):</div>"
+#col0.markdown(metric_col0, unsafe_allow_html=True)
+#col0.metric("", f" {n_houses:}", " ")
  
 
+    
+    
+    
+    
+metric_col0 = "<div style='font-size: 24px; font-weight: bold;'>Number Houses (Qty):</div>"
+col0.markdown(metric_col0, unsafe_allow_html=True)
+
+# Adicionar o valor de n_houses e o ícone da casa
+value = f"{n_houses} \U0001F3E0"
+components.html(f"<div style='font-size: 20px;'>{value}</div>", height=60)    
+    
+    
 
 #col1m, col2m = st.columns(2)
 #metric_html = f"<div style='font-size: 18px; font-weight: bold;'>Min (Qty):  {min_baths:}</div>"
