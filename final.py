@@ -175,7 +175,7 @@ col4.markdown(metric_html + metric_html2, unsafe_allow_html=True)
 seattle_weather = pd.read_csv('https://raw.githubusercontent.com/tvst/plost/master/data/seattle-weather.csv', parse_dates=['date'])
 stocks = pd.read_csv('https://raw.githubusercontent.com/dataprofessor/data/master/stocks_toy.csv')
 
-c1, c2 = st.columns(7,3)
+c1, c2 = st.columns(2)
 with c1:
     st.markdown('### Heatmap')
     
