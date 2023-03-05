@@ -236,13 +236,13 @@ st.write(f'<a href="{map_url}" target="_blank">Click here to view map</a>', unsa
 #<iframe src="https://maps.google.com/maps?q=Tangesir%20Dates%20Products&amp;t=&amp;z=13&amp;ie=UTF8&amp;iwloc=&amp;output=embed" width=300 height=150 allowfullscreen></iframe>
 
 
-from streamlit.components.v1 import html
+import streamlit.components.v1 as components
 
-google_maps_url = "https://www.google.com/maps/@51.9011024,-8.4941951,3a,75y,254.1h,90t/data=!3m7!1e1!3m5!1sAF1QipOz-BpF13JhlgTmgHuyBHQE7VnJv6uNE7-UUfL6!2e10!3e12!7i16384!8i8192"
-iframe = f'<iframe src="{google_maps_url}" width="1000" height="500"></iframe>'
-html_component = html.Iframe(srcdoc=iframe, width=1000, height=500)
-st.markdown("<h1>Google Maps Embedded</h1>", unsafe_allow_html=True)
-st.components.v1.html(html_component)
+iframe = '<iframe src="https://www.instantstreetview.com/@51.902544,-8.478546,-7.89h,0p,0z,t3TYjiEEK68_KwPyXNtsJA" width="1000" height="500"></iframe>'
+html_component = components.html(iframe, width=1000, height=500)
+
+st.write(html_component)
+
 
 # Row C
 st.markdown('### Line chart')
