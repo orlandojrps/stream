@@ -74,6 +74,23 @@ min_area = df_filtered['Area'].min()
 # Calculando max para o dataframe filtrado
 max_area = df_filtered['Area'].max()
 
+# Calculando média do campo df.area para o dataframe filtrado
+avg_beds = df_filtered['Beds'].mean()
+
+# Calculando minimo para o dataframe filtrado
+min_beds = df_filtered['Beds'].min()
+
+# Calculando max para o dataframe filtrado
+max_beds = df_filtered['Beds'].max()
+
+# Calculando média do campo df.area para o dataframe filtrado
+avg_baths = df_filtered['Baths'].mean()
+
+# Calculando minimo para o dataframe filtrado
+min_baths = df_filtered['Baths'].min()
+
+# Calculando max para o dataframe filtrado
+max_baths = df_filtered['Baths'].max()
 
 
 st.markdown(
@@ -88,7 +105,7 @@ st.markdown(
 )
 # Row A
 st.markdown('### Metrics: '+ df_city_area)
-col1, col2,col3, col5,col6 = st.columns(5)
+col1, col2,col3, col4,col6 = st.columns(5)
 metric_html0 = f"<div style='font-size: 24px; font-weight: bold;'>Average Price:</div>"
 col1.markdown(metric_html0, unsafe_allow_html=True)
 col1.metric("", f"€ {avg_price:,.2f}", " ")
@@ -106,8 +123,8 @@ metric_col2 = f"<div style='font-size: 24px; font-weight: bold;'>Average Area (m
 col2.markdown(metric_col2, unsafe_allow_html=True)
 col2.metric("", f" {avg_area:,.2f}", " ")
 col1m, col2m = st.columns(2)
-metric_html = f"<div style='font-size: 18px; font-weight: bold;'>Min (m2):  {min_area:}</div>"
-metric_html2 = f"<div style='font-size: 18px; font-weight: bold;'>Max (m2):  {max_area:}</div>"
+metric_html = f"<div style='font-size: 18px; font-weight: bold;'>Min (m2):  {min_area:,.2f}</div>"
+metric_html2 = f"<div style='font-size: 18px; font-weight: bold;'>Max (m2):  {max_area:,.2f}</div>"
 
 col1m, col2m = st.columns(2)
 col2.markdown(metric_html + metric_html2, unsafe_allow_html=True)
@@ -115,12 +132,41 @@ col2.markdown(metric_html + metric_html2, unsafe_allow_html=True)
 ##################################
 
 
-col3.metric("Humidity", "86%", "4%")
-col5.metric("Humidity", "86%", "4%")
-col6.metric("Humidity", "86%", "4%")
+###############################
+
+metric_col3 = f"<div style='font-size: 24px; font-weight: bold;'>Average Beds (Qty):</div>"
+col3.markdown(metric_col3, unsafe_allow_html=True)
+col3.metric("", f" {avg_beds:,.2f}", " ")
+col1m, col2m = st.columns(2)
+metric_html = f"<div style='font-size: 18px; font-weight: bold;'>Min (Qty):  {min_beds:}</div>"
+metric_html2 = f"<div style='font-size: 18px; font-weight: bold;'>Max (Qty):  {max_beds:}</div>"
+
+col1m, col2m = st.columns(2)
+col3.markdown(metric_html + metric_html2, unsafe_allow_html=True)
+
+##################################
+###############################
+
+metric_col4 = f"<div style='font-size: 24px; font-weight: bold;'>Average Baths (Qty):</div>"
+col4.markdown(metric_col4, unsafe_allow_html=True)
+col4.metric("", f" {avg_baths:,.2f}", " ")
+col1m, col2m = st.columns(2)
+metric_html = f"<div style='font-size: 18px; font-weight: bold;'>Min (Qty):  {min_baths:}</div>"
+metric_html2 = f"<div style='font-size: 18px; font-weight: bold;'>Max (Qty):  {max_baths:}</div>"
+
+col1m, col2m = st.columns(2)
+col4.markdown(metric_html + metric_html2, unsafe_allow_html=True)
+
+##################################
 
 
 
+
+
+
+#col3.metric("Humidity", "86%", "4%")
+#col5.metric("Humidity", "86%", "4%")
+#col6.metric("Humidity", "86%", "4%")
 
 
 
