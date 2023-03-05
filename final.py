@@ -154,9 +154,10 @@ df_filtered = df[df['city_area'] == "Cork City North East"]
 avg_price = df_filtered['Price'].mean()
 #st.markdown(f"Average Price: ${avg_price:,.2f}")
 
-'''df_filtered.describe()
+#df_filtered.describe()
 
-'''import streamlit as st
+'''
+import streamlit as st
 import pandas as pd
 import folium
 from geopy.geocoders import Nominatim
