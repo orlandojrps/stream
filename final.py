@@ -177,7 +177,7 @@ col0.markdown(metric_col0, unsafe_allow_html=True)
 
 # Adicionar o valor de n_houses e o ícone da casa
 value = f"{n_houses} \U0001F3E0"
-col0.markdown(f"<div style='font-size: 20px;'>{value}</div>", unsafe_allow_html=True)
+col0.markdown(f"<div style='font-size: 32px;'>{value}</div>", unsafe_allow_html=True)
 
 
 #col1m, col2m = st.columns(2)
