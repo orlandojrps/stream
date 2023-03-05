@@ -13,6 +13,7 @@ import folium
 from geopy.geocoders import Nominatim
 import time
 from PIL import Image
+import plost
 
 #!pip install plost
 
