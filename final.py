@@ -63,7 +63,10 @@ Created by Orlando).
 
 
 # Filtrando dataframe df com base em df_city_area selecionado
-#df_filtered = df[df['city_area'] == df_city_area]
+if df_city_area == "ALL":
+    filtered_df = df[df['city_area'] == "Cork City South Central"]
+    
+df_filtered = df[df['city_area'] == df_city_area]
 
 # Calculando média do campo df.price para o dataframe filtrado
 avg_price = df_filtered['Price'].mean()
