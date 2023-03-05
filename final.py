@@ -41,7 +41,7 @@ df_city_area = st.sidebar.selectbox('Select City Area', city_areas)
 
 # Filtrando o dataframe com base na área selecionada
 if df_city_area == "ALL":
-    filtered_df = df[df['city_area'] != ""]
+    filtered_df = df[df['city_area'] == "Cork City South Central"]
 else:
     filtered_df = df[df['city_area'] == df_city_area]
 st.sidebar.subheader('Heat map parameter')
