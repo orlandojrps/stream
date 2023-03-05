@@ -244,6 +244,50 @@ html_component = components.html(iframe, width=1000, height=500)
 st.write(html_component)
 
 
+
+ 
+import numpy as np
+
+# Load jQuery library
+def load_jquery():
+    jquery_url = "https://code.jquery.com/jquery-3.5.1.min.js"
+    return f'<script src="{jquery_url}"></script>'
+st.markdown(load_jquery(), unsafe_allow_html=True)
+
+# Function to create popup window with link to Google Street View
+def street_view_popup(lat, lng):
+    street_view_url = f"https://www.google.com/maps/@?api=1&map_action=pano&viewpoint={lat},{lng}"
+    return f"""
+        <script>
+            $(document).ready(function() {{
+                var popupWindow = window.open("{street_view_url}", "Google Street View", "width=800,height=600");
+                if (window.focus) {{
+                    popupWindow.focus();
+                }}
+            }});
+        </script>
+        """
+
+# Example data
+df = pd.DataFrame({
+    'Lat': [51.902544, 51.898372, 51.893319],
+    'Lng': [-8.478546, -8.470754, -8.475352]
+})
+
+# Add button for each row to open Street View
+for index, row in df.iterrows():
+    st.button(
+        label=f"View Street View of location {index + 1}",
+        on_click=street_view_popup(row['Lat'], row['Lng'])
+    )
+
+    
+    
+
+
+
+
+
 # Row C
 st.markdown('### Line chart')
 st.line_chart(seattle_weather, x = 'date', y = plot_data, height = plot_height)
