@@ -237,7 +237,7 @@ st.write(f'<a href="{map_url}" target="_blank">Click here to view map</a>', unsa
 
  
 google_maps_url = "https://www.google.com/maps/embed/v1/place?key=<YOUR_API_KEY>&q=Cork+City"
-iframe = f'<iframe src="{map_url}" width="1000" height="500"></iframe>'
+iframe = f'<iframe src="{google_maps_url}" width="1000" height="500"></iframe>'
 html_component = html.Iframe(src=iframe, width=1000, height=500)
 st.markdown("<h1>Google Maps Embedded</h1>", unsafe_allow_html=True)
 st.components.v1.html(html_component)
