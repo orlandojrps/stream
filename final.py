@@ -178,7 +178,7 @@ c1, c2 = st.columns((9,1))
 with c1:
     st.markdown('### Heatmap')
     
- def geocode_and_plot_addresses(df):
+def geocode_and_plot_addresses(df):
     geolocator = Nominatim(user_agent='user-my-application') # create a geolocator object
     addresses = df['Address'].head(9).tolist() # extract addresses from DataFrame 
     lats = []
