@@ -227,6 +227,9 @@ with c2:
 map_url = 'https://www.google.com/maps/@51.9011024,-8.4941951,3a,75y,254.1h,90t/data=!3m7!1e1!3m5!1sAF1QipOz-BpF13JhlgTmgHuyBHQE7VnJv6uNE7-UUfL6!2e10!3e12!7i16384!8i8192'
 
 st.write(f'<iframe src="{map_url}" width="1000" height="500"></iframe>', unsafe_allow_html=True)
+map_url = 'https://www.google.com/maps/@51.9011024,-8.4941951,3a,75y,254.1h,90t/data=!3m7!1e1!3m5!1sAF1QipOz-BpF13JhlgTmgHuyBHQE7VnJv6uNE7-UUfL6!2e10!3e12!7i16384!8i8192'
+
+st.write(f'<a href="{map_url}" target="_blank">Click here to view map</a>', unsafe_allow_html=True)
 
 # Row C
 st.markdown('### Line chart')
