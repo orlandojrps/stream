@@ -64,7 +64,7 @@ Created by Orlando).
 
 # Filtrando dataframe df com base em df_city_area selecionado
 if df_city_area == "ALL":
-    filtered_df = df[df['city_area'] == "Cork City South Central"]
+    filtered_df = df[df['city_area'] != "Cork City South Central"]
     
 else:
     df_filtered = df[df['city_area'] == df_city_area]
