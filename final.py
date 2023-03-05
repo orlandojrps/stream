@@ -24,7 +24,7 @@ df = pd.read_csv('https://raw.githubusercontent.com/orlandojrps/stream/main/df_f
  
 st.set_page_config(layout='wide', initial_sidebar_state='expanded')
 
-with open('https://raw.githubusercontent.com/orlandojrps/stream/main/style.css') as f:
+with open('https://github.com/orlandojrps/stream/blob/main/style.css') as f:
     st.markdown(f'<style>{f.read()}</style>', unsafe_allow_html=True)
     
 st.sidebar.header('Real Estate Market `Cork City v. 0.1`')
