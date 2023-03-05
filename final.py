@@ -247,21 +247,16 @@ st.write(f'<a href="{map_url}" target="_blank">Click here to view map</a>', unsa
 import webbrowser
 
 # Function to create popup window with link to Google Street View
-def street_view_popup(lat, lng):
-    street_view_url = f"https://www.google.com/maps/@?api=1&map_action=pano&viewpoint={lat},{lng}"
+def street_view_popup():
+    street_view_url = f"https://www.instantstreetview.com/@51.902544,-8.478546,-7.89h,0p,0z,t3TYjiEEK68_KwPyXNtsJA"
     webbrowser.open_new_tab(street_view_url)
 
-# Example data
-df = pd.DataFrame({
-    'Lat': [51.902544, 51.898372, 51.893319],
-    'Lng': [-8.478546, -8.470754, -8.475352]
-})
-
+ 
 # Add button for each row to open Street View
-for index, row in df.iterrows():
+ 
     st.button(
-        label=f"View Street View of location {index + 1}",
-        on_click=lambda lat=row['Lat'], lng=row['Lng']: street_view_popup(lat, lng)
+        label=f"View Street View of location",
+        on_click= street_view_popup()
     )
 
 
