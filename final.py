@@ -174,12 +174,11 @@ col4.markdown(metric_html + metric_html2, unsafe_allow_html=True)
 seattle_weather = pd.read_csv('https://raw.githubusercontent.com/tvst/plost/master/data/seattle-weather.csv', parse_dates=['date'])
 stocks = pd.read_csv('https://raw.githubusercontent.com/dataprofessor/data/master/stocks_toy.csv')
 
-c1, c2 = st.columns((7,3))
+c1, c2 = st.columns((9,1))
 with c1:
     st.markdown('### Heatmap')
     
- 
-def geocode_and_plot_addresses(df):
+ def geocode_and_plot_addresses(df):
     geolocator = Nominatim(user_agent='user-my-application') # create a geolocator object
     addresses = df['Address'].head(9).tolist() # extract addresses from DataFrame 
     lats = []
@@ -191,29 +190,29 @@ def geocode_and_plot_addresses(df):
         time.sleep(0) # add a 1.1-second interval between requests
     
     # calculate summary statistics
-    num_houses = df['Price'].count()
-    avg_price = df['Price'].mean()
-    lowest_price = df['Price'].min()
-    highest_price = df['Price'].max()
+    #num_houses = df['Price'].count()
+    #avg_price = df['Price'].mean()
+    #lowest_price = df['Price'].min()
+    #highest_price = df['Price'].max()
     
     # create a table with the summary statistics
-    summary_table = pd.DataFrame({
-        'Number of Houses': [num_houses],
-        'Average Price': [avg_price],
-        'Lowest Price': [lowest_price],
-        'Highest Price': [highest_price]
-    })
+    #summary_table = pd.DataFrame({
+     #   'Number of Houses': [num_houses],
+      #  'Average Price': [avg_price],
+       # 'Lowest Price': [lowest_price],
+        #'Highest Price': [highest_price]
+    #})
     
     # create a streamlit table and add it to the interface
-    styler = summary_table.style.format({
-        'Average Price': '${:.2f}',
-        'Lowest Price': '${:.2f}',
-        'Highest Price': '${:.2f}'
-    })
+    #styler = summary_table.style.format({
+     #   'Average Price': '${:.2f}',
+      #  'Lowest Price': '${:.2f}',
+       # 'Highest Price': '${:.2f}'
+    #})
 
     #house_icon = Image.open("https://raw.githubusercontent.com/orlandojrps/stream/0e63fdd22c7dfa974e221319fb4ca60acc174d8f/teste.jpg")
 
-    st.write(styler, unsafe_allow_html=True)
+    #st.write(styler, unsafe_allow_html=True)
     
     # plot the coordinates on a map using Folium
     map_center = [51.897928, -8.470579] # center the map on Cork City
