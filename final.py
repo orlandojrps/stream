@@ -177,9 +177,8 @@ col0.markdown(metric_col0, unsafe_allow_html=True)
 
 # Adicionar o valor de n_houses e o ícone da casa
 value = f"{n_houses} \U0001F3E0"
-components.html(f"<div style='font-size: 20px;'>{value}</div>", height=60)    
-    
-    
+col0.markdown(f"<div style='font-size: 20px;'>{value}</div>", unsafe_allow_html=True)
+
 
 #col1m, col2m = st.columns(2)
 #metric_html = f"<div style='font-size: 18px; font-weight: bold;'>Min (Qty):  {min_baths:}</div>"
