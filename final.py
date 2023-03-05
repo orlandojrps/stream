@@ -79,7 +79,7 @@ st.markdown(
     unsafe_allow_html=True
 )
 # Row A
-st.markdown('### Metrics')
+st.markdown('### Metrics: '+ df_city_area)
 col1, col2,col3, col5,col6 = st.columns(5)
 metric_html0 = f"<div style='font-size: 24px; font-weight: bold;'>Average Price:</div>"
 col1.markdown(metric_html0, unsafe_allow_html=True)
