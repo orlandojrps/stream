@@ -236,16 +236,8 @@ def geocode_and_plot_addresses(df):
 # Create a button to plot addresses on the map
 if st.button('Plot addresses on the map'):
     geocode_and_plot_addresses(df_filtered)
-    plost.time_hist(
-    data=seattle_weather,
-    date='date',
-    x_unit='week',
-    y_unit='day',
-    color=time_hist_color,
-    aggregate='median',
-    legend=None,
-    height=345,
-    use_container_width=True)
+    
+    
 with c2:
     st.markdown('### Donut chart')
     plost.donut_chart(
