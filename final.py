@@ -241,6 +241,10 @@ iframe = f'<iframe src="{google_maps_url}" width="1000" height="500"></iframe>'
 html_component = html.Iframe(src=iframe, width=1000, height=500)
 st.markdown("<h1>Google Maps Embedded</h1>", unsafe_allow_html=True)
 st.components.v1.html(html_component)
+
+
+
+
 # Row C
 st.markdown('### Line chart')
 st.line_chart(seattle_weather, x = 'date', y = plot_data, height = plot_height)
