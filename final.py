@@ -14,6 +14,7 @@ from geopy.geocoders import Nominatim
 import time
 from PIL import Image
 import plost
+import streamlit.components.v1 as components
 
 #!pip install plost
 
