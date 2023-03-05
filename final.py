@@ -39,6 +39,7 @@ city_areas.insert(0, "ALL")
 # Criando o filtro para selecionar a área da cidade
 df_city_area = st.sidebar.selectbox('Select City Area', city_areas)
 
+
 # Filtrando o dataframe com base na área selecionada
 #if df_city_area == "ALL":
  #   filtered_df = df[df['city_area'] == "Cork City South Central"]
@@ -63,6 +64,7 @@ Created by Orlando).
 
 
 # Filtrando dataframe df com base em df_city_area selecionado
+print(df_city_area)
 if df_city_area == "ALL":
     filtered_df = df[df['city_area'] != "Cork City South Central"]
     
