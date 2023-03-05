@@ -232,7 +232,7 @@ map_url = 'https://www.google.com/maps/@51.9011024,-8.4941951,3a,75y,254.1h,90t/
 
 st.write(f'<a href="{map_url}" target="_blank">Click here to view map</a>', unsafe_allow_html=True)
 
-<iframe src="https://maps.google.com/maps?q=Tangesir%20Dates%20Products&amp;t=&amp;z=13&amp;ie=UTF8&amp;iwloc=&amp;output=embed" width=300 height=150 allowfullscreen></iframe>
+#<iframe src="https://maps.google.com/maps?q=Tangesir%20Dates%20Products&amp;t=&amp;z=13&amp;ie=UTF8&amp;iwloc=&amp;output=embed" width=300 height=150 allowfullscreen></iframe>
 
 
 # Row C
