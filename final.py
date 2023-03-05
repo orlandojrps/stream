@@ -162,7 +162,7 @@ col4.markdown(metric_html + metric_html2, unsafe_allow_html=True)
 ##################################
 ###############################
 
-metric_col0 = f"<div style='font-size: 24px; font-weight: bold; color:red;'>Number Houses (Qty):</div>"
+metric_col0 = f"<div style='font-size: 24px; font-weight: bold; color:#009FB2;'>Number Houses (Qty):</div>"
 col0.markdown(metric_col0, unsafe_allow_html=True)
 col0.metric("", f" {n_houses:}", " ")
 #col1m, col2m = st.columns(2)
