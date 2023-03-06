@@ -426,35 +426,66 @@ st.write(f'<a href="{map_url}" target="_blank">Click here to view map</a>', unsa
 
 
     
+def modal_form():
+    # Define the HTML for the modal
+    modal_html = """
+    <div class="modal fade" id="myModal" tabindex="-1" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="form-group">
+                <label for="exampleInputEmail1">Email address</label>
+                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+              </div>
+              <div class="form-group">
+                <label for="exampleInputPassword1">Password</label>
+                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Save changes</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    """
+
+    # Define the JavaScript to trigger the modal
+    trigger_js = """
+    <script>
+        $(document).ready(function() {
+            $('#myModal').modal('show');
+        });
+    </script>
+    """
+
+    # Display the modal HTML and JavaScript in Streamlit
+    st.markdown(modal_html, unsafe_allow_html=True)
+    st.markdown(trigger_js, unsafe_allow_html=True)
+
+# Define the Streamlit app
+def main():
+    st.title("Streamlit Bootstrap Modal Demo")
+
+    # Display a button to open the modal
+    if st.button("Open modal"):
+        modal_form()
+
+if __name__ == "__main__":
+    main()
     
-from streamlit_modal import Modal
-
-import streamlit.components.v1 as components
-
-
-modal = Modal("Demo Modal")
-open_modal = st.button("Open")
-if open_modal:
-    modal.open()
-
-if modal.is_open():
-    with modal.container():
-        st.write("Text goes here")
-
-        html_string = '''
-        <h1>HTML string in RED</h1>
-
-        <script language="javascript">
-          document.querySelector("h1").style.color = "red";
-        </script>
-        '''
-        components.html(html_string)
-
-        st.write("Some fancy text")
-        value = st.checkbox("Check me")
-        st.write(f"Checkbox checked: {value}")
-
-
+    
+    
+    
+    
+    
 
 
 
