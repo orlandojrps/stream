@@ -403,7 +403,7 @@ def geocode_and_plot_addresses(df):
 
 
 
-if st.button('Plot addresses on the map'):
+if c2.button('Plot addresses on the map'):
     geocode_and_plot_addresses(df_filtered)  
 
     
