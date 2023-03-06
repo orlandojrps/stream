@@ -228,7 +228,10 @@ col5, col6, col7, col8, col9 = st.columns(5)
 col5.header("KDE Plot Example")
 sns.set_style('whitegrid')
 sns.set_palette('husl')
-sns.kdeplot(df_filtered['Price'], ax=col5, shade=True, common_norm=True)
+#sns.kdeplot(df_filtered['Price'], ax=col5, shade=True, common_norm=True)
+
+sns.kdeplot(data=df_filtered, x="Price")
+
 col5.set(xlabel='Price', ylabel='Density')
 #col1m, col2m = st.columns(2)
 #metric_html = f"<div style='font-size: 18px; font-weight: bold;'>Min (m2):  {min_area:,.2f}</div>"
