@@ -8,3 +8,6 @@ plost
 seaborn
 joblib
 scikit-learn==1.1.1
+plotly
+scipy
+matplotlib
