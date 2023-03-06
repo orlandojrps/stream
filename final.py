@@ -421,31 +421,7 @@ st.write(f'<a href="{map_url}" target="_blank">Click here to view map</a>', unsa
 
 
 
-
-# Define the link URL and text
-url = "https://www.google.com"
-link_text = "Click here to open popup window"
-
-# Define the JavaScript code to open the window
-js_code = f"""
-    <script>
-        function openPopup() {{
-            window.open("{url}", "popup", "width=800,height=600");
-        }}
-    </script>
-"""
-
-# Define the link HTML with an onclick event
-link_html = f'<a href="#" onclick="openPopup()">{link_text}</a>'
-
-# Combine the JavaScript code and link HTML
-html = js_code + link_html
-
-# Create a Streamlit component to display the HTML
-popup_link = HtmlComponent(html)
-
-# Display the popup link in Streamlit
-st.markdown(popup_link, unsafe_allow_html=True)
+ 
 
 
 
