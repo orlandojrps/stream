@@ -536,9 +536,11 @@ df_filtered_pred['Average Price by City Area'] = df_filtered_pred['city_area'].m
 priceArea = df_filtered_pred['city_area'].map(average_price)
     
 #teste = median_price_m2.astype('int')
-teste = int(median_price_m2.values[0])
+m2 = int(median_price_m2.values[0])
+avg_m2=int(mean_price_m2.values[0])
+avg_m2_area = int(average_price.values[0])
 
-features = np.array([pred_beds, pred_baths, pred_area, 3566, pred_area, pred_area]).reshape(1, -1)
+features = np.array([pred_beds, pred_baths, pred_area, m2, avg_m2, avg_m2_area]).reshape(1, -1)
     
     
     
@@ -546,4 +548,4 @@ features = np.array([pred_beds, pred_baths, pred_area, 3566, pred_area, pred_are
 #######features = np.array([pred_beds, pred_baths, pred_area, pred_area, pred_area, pred_area]).reshape(1, -1)
 prediction = predict(features)
 #c2.write('Your Suggested Price is:', 12)  
-c2.markdown(f"<div style='font-size: 64px;'>{teste}</div>", unsafe_allow_html=True)
+c2.markdown(f"<div style='font-size: 64px;'>{prediction}</div>", unsafe_allow_html=True)
