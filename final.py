@@ -547,3 +547,16 @@ formatted_prediction = "{:.2f}".format(prediction/100000)
 
 c2.markdown(f"<div style='font-size: 64px;'>{formatted_prediction}</div>", unsafe_allow_html=True)
 print(f"<div style='font-size: 64px;'>{formatted_prediction}</div>")
+
+
+
+
+
+
+
+# Add the CSS class to the Markdown
+st.markdown(f"<style>{link_class}</style>", unsafe_allow_html=True)
+
+# Display the list of clickable links with the CSS class applied
+for link in link_list:
+    st.markdown(f'<a class="link" href="{link}" target="_blank">{link}</a>', unsafe_allow_html=True)
