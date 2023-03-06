@@ -128,8 +128,8 @@ st.markdown(
 st.markdown('### Metrics: '+ df_city_area)
 
 col0  = st.columns(1)
-metric_html0 = f"<div style='font-size: 24px; font-weight: bold;'>Average Price:</div>"
-col1.markdown(metric_html0, unsafe_allow_html=True)
+#metric_html0 = f"<div style='font-size: 24px; font-weight: bold;'>Average Price:</div>"
+#col1.markdown(metric_html0, unsafe_allow_html=True)
 col1.metric("", f"€ {avg_price:,.2f}", " ")
 
 col1m, col2m = st.columns(2)
