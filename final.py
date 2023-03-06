@@ -394,38 +394,10 @@ if (0==0):
     
     
 with c2:
-    st.markdown('### Donut chart')
-    #plost.donut_chart(
-     #   data=stocks,
-      #  theta=donut_theta,
-       # color='company',
-        #legend='bottom', 
-        #use_container_width=True)
-
-#ap_url = 'https://www.google.com/maps/@51.9011024,-8.4941951,3a,75y,254.1h,90t/data=!3m7!1e1!3m5!1sAF1QipOz-BpF13JhlgTmgHuyBHQE7VnJv6uNE7-UUfL6!2e10!3e12!7i16384!8i8192'
-#map_url = 'https://maps.google.com/maps?q=Tangesir%20Dates%20Products&amp;t=&amp;z=13&amp;ie=UTF8&amp;iwloc=&amp;output=embed'
-map_url = 'https://www.instantstreetview.com/@51.902544,-8.478546,-7.89h,0p,0z,t3TYjiEEK68_KwPyXNtsJA'
-
-#st.write(f'<iframe src="{map_url}" width="1000" height="500"></iframe>', unsafe_allow_html=True)
-#map_url = 'https://www.google.com/maps/@51.9011024,-8.4941951,3a,75y,254.1h,90t/data=!3m7!1e1!3m5!1sAF1QipOz-BpF13JhlgTmgHuyBHQE7VnJv6uNE7-UUfL6!2e10!3e12!7i16384!8i8192'
-
-st.write(f'<a href="{map_url}" target="_blank">Click here to view map</a>', unsafe_allow_html=True)
-
-#<iframe src="https://maps.google.com/maps?q=Tangesir%20Dates%20Products&amp;t=&amp;z=13&amp;ie=UTF8&amp;iwloc=&amp;output=embed" width=300 height=150 allowfullscreen></iframe>
-
-
-#import streamlit.components.v1 as components
-
-#iframe = '<iframe src="https://www.instantstreetview.com/@51.902544,-8.478546,-7.89h,0p,0z,t3TYjiEEK68_KwPyXNtsJA" width="1000" height="500"></iframe>'
-#html_component = components.html(iframe, width=1000, height=500)
-
-
-
-
- 
-
-
+    st.markdown('### Best Offers')
     
+map_url = 'https://www.instantstreetview.com/@51.902544,-8.478546,-7.89h,0p,0z,t3TYjiEEK68_KwPyXNtsJA'
+st.write(f'<a href="{map_url}" target="_blank">Click here to view map</a>', unsafe_allow_html=True)
     
     
 
