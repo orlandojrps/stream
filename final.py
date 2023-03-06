@@ -41,7 +41,11 @@ city_areas = list(df['city_area'].unique())
 city_areas.insert(0, "ALL")
 
 # Area Select
-st.sidebar.subheader('Area Filter')
+#st.sidebar.subheader('Area Filter')
+st.sidebar.markdown(
+    f'<h3 style="color: #1B9685;">Area Filter \U0001F1EE</h3>',
+    unsafe_allow_html=True
+)
 df_city_area = st.sidebar.selectbox('Select City Area', city_areas)
 
 
