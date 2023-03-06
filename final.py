@@ -139,6 +139,16 @@ metric_html2 = f"<div style='font-size: 18px; font-weight: bold;'>Max Price: €
 col1m, col2m = st.columns(2)
 col1.markdown(metric_html + metric_html2, unsafe_allow_html=True)
 
+fig, ax = plt.subplots(figsize=(6,4))
+sns.kdeplot(data=df_filtered, x="Price", ax=ax, shade=True, color="#1f77b4", alpha=0.8)
+ax.set(xlabel='Price', ylabel='Density')
+ax.spines['top'].set_visible(False)
+ax.spines['right'].set_visible(False)
+ax.tick_params(axis='both', which='both', length=0)
+col1.pyplot(fig)
+
+
+
 ###############################
 
 metric_col2 = f"<div style='font-size: 24px; font-weight: bold;'>Average Area (m2):</div>"
@@ -228,16 +238,16 @@ num_bins = 100
 #hist_values, hist_edges = np.histogram(df_filtered['Price'], bins=num_bins)
 #col5.bar_chart(hist_values, width=200, height=200, use_container_width=False)
 
-
-col5, col6, col7, col8, col9 = st.columns(5)
-fig, ax = plt.subplots(figsize=(6,4))
-sns.kdeplot(data=df_filtered, x="Price", ax=ax, shade=True, color="#1f77b4", alpha=0.8)
-ax.set(xlabel='Price', ylabel='Density')
-ax.spines['top'].set_visible(False)
-ax.spines['right'].set_visible(False)
-ax.tick_params(axis='both', which='both', length=0)
-col5.pyplot(fig)
- 
+#8888888888888888888888888888888888888888
+#col5, col6, col7, col8, col9 = st.columns(5)
+#fig, ax = plt.subplots(figsize=(6,4))
+#sns.kdeplot(data=df_filtered, x="Price", ax=ax, shade=True, color="#1f77b4", alpha=0.8)
+#ax.set(xlabel='Price', ylabel='Density')
+#ax.spines['top'].set_visible(False)
+#ax.spines['right'].set_visible(False)
+#ax.tick_params(axis='both', which='both', length=0)
+#col5.pyplot(fig)
+#888888888888888888888888888888888888888 
 
 
 #col5.set(xlabel='Price', ylabel='Density')
