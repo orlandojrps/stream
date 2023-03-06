@@ -36,11 +36,12 @@ with open('style.css') as f:
 st.sidebar.header('Real Estate Market `Cork City v. 0.1`')
 st.sidebar.image("https://raw.githubusercontent.com/orlandojrps/stream/main/map.jpg", use_column_width=True)
 
-# Adicionando opção "Todos" à lista de áreas da cidade
+# Add All option
 city_areas = list(df['city_area'].unique())
 city_areas.insert(0, "ALL")
 
-# Criando o filtro para selecionar a área da cidade
+# Area Select
+st.sidebar.subheader('Area Filter')
 df_city_area = st.sidebar.selectbox('Select City Area', city_areas)
 
 
