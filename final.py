@@ -232,7 +232,7 @@ sns.set_palette('husl')
 
 sns.kdeplot(data=df_filtered, x="Price")
 
-col5.set(xlabel='Price', ylabel='Density')
+#col5.set(xlabel='Price', ylabel='Density')
 #col1m, col2m = st.columns(2)
 #metric_html = f"<div style='font-size: 18px; font-weight: bold;'>Min (m2):  {min_area:,.2f}</div>"
 #metric_html2 = f"<div style='font-size: 18px; font-weight: bold;'>Max (m2):  {max_area:,.2f}</div>"
