@@ -426,63 +426,25 @@ st.write(f'<a href="{map_url}" target="_blank">Click here to view map</a>', unsa
 
 
     
-def modal_form():
-    # Define the HTML for the modal
-    modal_html = """
-    <div class="modal fade" id="myModal" tabindex="-1" aria-labelledby="myModalLabel" aria-hidden="true">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h4 class="modal-title" id="myModalLabel">Modal title</h4>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-          </div>
-          <div class="modal-body">
-            <form>
-              <div class="form-group">
-                <label for="exampleInputEmail1">Email address</label>
-                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
-              </div>
-              <div class="form-group">
-                <label for="exampleInputPassword1">Password</label>
-                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
-              </div>
-            </form>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-primary">Save changes</button>
-          </div>
-        </div>
-      </div>
-    </div>
-    """
-
-    # Define the JavaScript to trigger the modal
-    trigger_js = """
-    <script>
-        $(document).ready(function() {
-            $('#myModal').modal('show');
-        });
-    </script>
-    """
-
-    # Display the modal HTML and JavaScript in Streamlit
-    st.markdown(modal_html, unsafe_allow_html=True)
-    st.markdown(trigger_js, unsafe_allow_html=True)
-
-# Define the Streamlit app
-def main():
-    st.title("Streamlit Bootstrap Modal Demo")
-
-    # Display a button to open the modal
-    if st.button("Open modal"):
-        modal_form()
-
-if __name__ == "__main__":
-    main()
+import folium
+from streamlit_folium import st_folium, folium_static
     
+#m = folium.Map(location=[df.latitude.mean(), df.longitude.mean()], 
+                 zoom_start=3, control_scale=True)
+
+#Loop through each row in the dataframe
+#for i,row in df.iterrows():
+    #Setup the content of the popup
+    iframe = folium.IFrame('Well Name:' + str(row["Well Name"]))
     
+    #Initialise the popup using the iframe
+    popup = folium.Popup(iframe, min_width=300, max_width=300)
     
+    #Add each row to the map
+    folium.Marker(location=[row['latitude'],row['longitude']],
+                  popup = popup, c=row['Well Name']).add_to(m)
+
+st_data = st_folium(m, width=700)  
     
     
     
