@@ -352,7 +352,7 @@ stocks = pd.read_csv('https://raw.githubusercontent.com/dataprofessor/data/maste
 
 c1, c2 = st.columns(2)
 with c1:
-    st.markdown('### Heatmap')
+    st.markdown('### Map Plot')
     
 def geocode_and_plot_addresses(df):
     geolocator = Nominatim(user_agent='user-my-application') # create a geolocator object
@@ -386,7 +386,7 @@ def geocode_and_plot_addresses(df):
 #filtered_df = df[df['city_area'] == city_area]
 
 # Create a button to plot addresses on the map
-if st.button('Plot addresses on the map'):
+#if st.button('Plot addresses on the map'):
     geocode_and_plot_addresses(df_filtered)
     
     
