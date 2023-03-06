@@ -50,7 +50,11 @@ df_city_area = st.sidebar.selectbox('Select City Area', city_areas)
  #   filtered_df = df[df['city_area'] == "Cork City South Central"]
 #else:
  #   filtered_df = df[df['city_area'] == df_city_area]
-st.sidebar.subheader('Price Prediction Modeling')
+value = "\U0001F3E1"
+st.markdown(f"<div style='font-size: 64px;'>{value}</div>", unsafe_allow_html=True)
+
+    
+st.sidebar.subheader('Price Prediction Modeling \U0001F3E1')
 pred_city_area = st.sidebar.selectbox('City Area', city_areas)
 
 st.sidebar.subheader('Price Prediction Modeling')
