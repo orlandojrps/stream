@@ -72,7 +72,7 @@ pred_area = st.sidebar.slider('Specify Size', 40, 800, 150)
 beds_list = sorted(df["Beds"].unique())
 
 st.sidebar.subheader('Donut chart parameter')
-pred_beds = st.sidebar.selectbox('Qty Beds', beds_list))
+pred_beds = st.sidebar.selectbox('Qty Beds', beds_list)
 
 st.sidebar.subheader('Line chart parameters')
 plot_data = st.sidebar.multiselect('Select data', ['temp_min', 'temp_max'], ['temp_min', 'temp_max'])
