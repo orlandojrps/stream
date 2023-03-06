@@ -137,7 +137,7 @@ col1m, col2m = st.columns(2)
 metric_html = f"<div style='font-size: 18px; font-weight: bold;'>Min Price: € {min_price:,.2f}</div>"
 metric_html2 = f"<div style='font-size: 18px; font-weight: bold;'>Max Price: € {max_price:,.2f}</div>"
 
-col1m, col2m = st.columns(2)
+#col1m, col2m = st.columns(2)
 col1.markdown(metric_html + metric_html2, unsafe_allow_html=True)
 
 #fig, ax = plt.subplots(figsize=(6,4))
@@ -176,7 +176,7 @@ col1m, col2m = st.columns(2)
 metric_html = f"<div style='font-size: 18px; font-weight: bold;'>Min (m2):  {min_area:,.2f}</div>"
 metric_html2 = f"<div style='font-size: 18px; font-weight: bold;'>Max (m2):  {max_area:,.2f}</div>"
 
-col1m, col2m = st.columns(2)
+#col1m, col2m = st.columns(2)
 col2.markdown(metric_html + metric_html2, unsafe_allow_html=True)
 
 fig, ax = plt.subplots(figsize=(6,4))
