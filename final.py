@@ -535,7 +535,8 @@ priceMean=df_filtered_pred['city_area'].map(mean_price_m2)
 df_filtered_pred['Average Price by City Area'] = df_filtered_pred['city_area'].map(average_price)
 priceArea = df_filtered_pred['city_area'].map(average_price)
     
-teste = median_price_m2.astype('int')
+#teste = median_price_m2.astype('int')
+teste = int(median_price_m2.values[0])
 
 features = np.array([pred_beds, pred_baths, pred_area, 3566, pred_area, pred_area]).reshape(1, -1)
     
