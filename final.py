@@ -33,7 +33,7 @@ st.set_page_config(layout='wide', initial_sidebar_state='expanded')
 with open('style.css') as f:
     st.markdown(f'<style>{f.read()}</style>', unsafe_allow_html=True)
     
-st.sidebar.header('Real Estate Market `Cork City v. 0.1`')
+st.sidebar.header('Real Estate Market                 `Cork City v. 0.1`')
 st.sidebar.image("https://raw.githubusercontent.com/orlandojrps/stream/main/map.jpg", use_column_width=True)
 
 # Add All option
