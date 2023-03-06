@@ -520,6 +520,9 @@ df_filtered_pred = df[df['city_area'] == pred_city_area]
 df_filtered_pred['Price per m2'] = df_filtered_pred['Price'] / df_filtered_pred['Area']
 priceM2 = df_filtered_pred['Price'] / df_filtered_pred['Area']
 
+# calculate the median per square meter per city area
+median_price_m2 = df_filtered_pred.groupby('city_area')['Price per m2'].median()
+
 # Calculate the average price per square meter by city area
 mean_price_m2 = df_filtered_pred.groupby('city_area')['Price per m2'].mean()
 
@@ -534,7 +537,7 @@ priceArea = df_filtered_pred['city_area'].map(average_price)
     
 
     
-#features = np.array([pred_beds, pred_baths, pred_area, mean_price_m2, mean_price_m2, priceArea]).reshape(1, -1)
+#features = np.array([pred_beds, pred_baths, pred_area, median_price_m2, mean_price_m2, priceArea]).reshape(1, -1)
 #prediction = predict(features)
 #c2.write('Your Suggested Price is:', 12)  
-c2.markdown(f"<div style='font-size: 64px;'>{mean_price_m2}</div>", unsafe_allow_html=True)
+c2.markdown(f"<div style='font-size: 64px;'>{median_price_m2}</div>", unsafe_allow_html=True)
