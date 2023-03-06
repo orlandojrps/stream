@@ -215,7 +215,7 @@ col0.markdown(f"<div style='font-size: 64px;'>{value}</div>", unsafe_allow_html=
 data = np.random.randn(100)
 
 # Define histogram settings
-num_bins = 10
+num_bins = 100
 #hist_range = (-3, 3)
 
 # Create histogram and display in col5
