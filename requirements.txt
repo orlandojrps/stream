@@ -7,3 +7,4 @@ branca==0.3.1
 plost
 seaborn
 joblib
+scikit-learn==1.1.1
