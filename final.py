@@ -226,6 +226,7 @@ col5, col6, col7, col8, col9 = st.columns(5)
 #1col5.bar_chart(hist_values, width=200, height=200, use_container_width=False)
 
 col5.header("KDE Plot Example")
+df_filtered['Price'] = df_filtered['Price'].astype(float)
 sns.kdeplot(df_filtered['Price'], ax=col5, shade=True, common_norm=True)
 #col1m, col2m = st.columns(2)
 #metric_html = f"<div style='font-size: 18px; font-weight: bold;'>Min (m2):  {min_area:,.2f}</div>"
