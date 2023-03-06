@@ -489,10 +489,6 @@ def street_view_popup():
 
 
 # Row C
-st.markdown('### Line chart')
-st.line_chart(seattle_weather, x = 'date', y = plot_data, height = plot_height)
-
-
 
 ################## PREDICTION#################################
 from io import BytesIO
