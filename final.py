@@ -127,9 +127,9 @@ st.markdown(
 # Row A
 st.markdown('### Metrics: '+ df_city_area)
 
-col1  = st.columns(1)
-metric_htmlx = f"<div style='font-size: 24px; font-weight: bold;'>Average Price:</div>"
-col1.markdown(metric_htmlX, unsafe_allow_html=True)
+col0,col1, col2,col3, col4 = st.columns(5)
+metric_html0 = f"<div style='font-size: 24px; font-weight: bold;'>Average Price:</div>"
+col1.markdown(metric_html0, unsafe_allow_html=True)
 col1.metric("", f"€ {avg_price:,.2f}", " ")
 
 col1m, col2m = st.columns(2)
@@ -167,7 +167,6 @@ col1.pyplot(fig)
 
 
 ###############################
-col0, col2,col3, col4 = st.columns(4)
 
 metric_col2 = f"<div style='font-size: 24px; font-weight: bold;'>Average Area (m2):</div>"
 col2.markdown(metric_col2, unsafe_allow_html=True)
