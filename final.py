@@ -406,7 +406,18 @@ c2.markdown(metric_c2, unsafe_allow_html=True)
 value = f"{n_houses} \U0001F3E1"
 c2.markdown(f"<div style='font-size: 64px;'>{value}</div>", unsafe_allow_html=True)
 
-   
+# Get the top 10 rows with the lowest prices
+df_filtered_links = df_filtered.nsmallest(10, "Price")
+
+# Create a list of clickable links for the top 10 rows
+link_list = []
+for index, row in df_filtered_links.iterrows():
+    link = f'<a href="{row["link"]}" target="_blank">{row["Address"]}</a>'
+    link_list.append(link)
+
+# Display the list of clickable links
+for link in link_list:
+    c2.markdown(link, unsafe_allow_html=True)
     
 
 
