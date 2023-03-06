@@ -5,3 +5,4 @@ geopy
 Nominatim
 branca==0.3.1
 plost
+seaborn
