@@ -201,7 +201,7 @@ col2.pyplot(fig)
 metric_col3 = f"<div style='font-size: 24px; font-weight: bold;'>Average Beds (Qty):</div>"
 col3.markdown(metric_col3, unsafe_allow_html=True)
 col3.metric("", f" {avg_beds:,.2f}", " ")
-col1m, col2m = st.columns(2)
+#col1m, col2m = st.columns(2)
 metric_html = f"<div style='font-size: 18px; font-weight: bold;'>Min (Qty):  {min_beds:}</div>"
 metric_html2 = f"<div style='font-size: 18px; font-weight: bold;'>Max (Qty):  {max_beds:}</div>"
 
