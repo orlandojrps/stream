@@ -239,6 +239,26 @@ metric_html2 = f"<div style='font-size: 18px; font-weight: bold;'>Max (Qty):  {m
 col1m, col2m = st.columns(2)
 col4.markdown(metric_html + metric_html2, unsafe_allow_html=True)
 
+
+
+
+# Create the bar plot
+fig, ax = plt.subplots(figsize=(8,6))
+sns.countplot(data=df_filtered, x="Baths", palette="deep")
+
+# Add a title and axis labels
+plt.title("Count of Bathrooms")
+plt.xlabel("Number of Bathrooms")
+plt.ylabel("Count")
+
+# Remove top and right spines and ticks
+ax.spines['top'].set_visible(False)
+ax.spines['right'].set_visible(False)
+ax.tick_params(axis='both', which='both', length=0)
+
+# Display the plot
+col4.pyplot(fig)
+
 ##################################
 ###############################
 
