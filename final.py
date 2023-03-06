@@ -126,7 +126,7 @@ st.markdown(
 )
 # Row A
 col00 = st.columns(1)
-col000.markdown('### Metrics: '+ df_city_area)
+col00.markdown('### Metrics: '+ df_city_area)
 col0,col1, col2,col3, col4 = st.columns(5)
 metric_html0 = f"<div style='font-size: 24px; font-weight: bold;'>Average Price:</div>"
 col1.markdown(metric_html0, unsafe_allow_html=True)
