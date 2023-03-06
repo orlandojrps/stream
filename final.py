@@ -79,13 +79,11 @@ pred_beds = st.sidebar.selectbox('Qty Beds', beds_list)
 #st.sidebar.subheader('Donut chart parameter')
 pred_baths = st.sidebar.selectbox('Qty Baths', baths_list)
 
-st.sidebar.subheader('Line chart parameters')
-plot_data = st.sidebar.multiselect('Select data', ['temp_min', 'temp_max'], ['temp_min', 'temp_max'])
-plot_height = st.sidebar.slider('Specify plot height', 200, 500, 250)
-
 st.sidebar.markdown('''
 ---
-Created by Orlando).
+Created by Orlando.
+Data Science &Analytics - 2023.
+Mr. Aeguns Daly
 ''')
 
 
