@@ -178,6 +178,20 @@ metric_html2 = f"<div style='font-size: 18px; font-weight: bold;'>Max (m2):  {ma
 col1m, col2m = st.columns(2)
 col2.markdown(metric_html + metric_html2, unsafe_allow_html=True)
 
+fig, ax = plt.subplots(figsize=(6,4))
+sns.boxplot(data=df_filtered, x="Area", ax=ax, color="#1f77b4", linewidth=1)
+
+# Remove spines and ticks
+ax.spines['top'].set_visible(False)
+ax.spines['right'].set_visible(False)
+ax.tick_params(axis='both', which='both', length=0)
+
+# Add labels
+ax.set(xlabel='Area', ylabel='Price')
+
+# Display the plot
+col2.pyplot(fig)
+
 ##################################
 
 
