@@ -237,7 +237,7 @@ col4.metric("", f" {avg_baths:,.2f}", " ")
 metric_html = f"<div style='font-size: 18px; font-weight: bold;'>Min (Qty):  {min_baths:}</div>"
 metric_html2 = f"<div style='font-size: 18px; font-weight: bold;'>Max (Qty):  {max_baths:}</div>"
 
-col1m, col2m = st.columns(2)
+#col1m, col2m = st.columns(2)
 col4.markdown(metric_html + metric_html2, unsafe_allow_html=True)
 
 
