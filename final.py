@@ -540,7 +540,7 @@ m2 = float(median_price_m2.values[0])
 avg_m2=float(mean_price_m2.values[0])
 avg_m2_area = float(average_price.values[0])
 
-features = np.array([pred_beds, pred_baths, pred_area, m2, avg_m2, 1]).reshape(1, -1)
+features = np.array([pred_beds, pred_baths, pred_area, m2, avg_m2, 0.000001]).reshape(1, -1)
     
     
     
