@@ -222,11 +222,20 @@ num_bins = 100
 #hist_range = (-3, 3)
 
 # Create histogram and display in col5
-col5, col6, col7, col8, col9 = st.columns(5)
+#col5, col6, col7, col8, col9 = st.columns(5)
 #col5.header("Histogram Example")
-hist_values, hist_edges = np.histogram(df_filtered['Price'], bins=num_bins)
-col5.bar_chart(hist_values, width=200, height=200, use_container_width=False)
+#hist_values, hist_edges = np.histogram(df_filtered['Price'], bins=num_bins)
+#col5.bar_chart(hist_values, width=200, height=200, use_container_width=False)
 
+
+col5, col6, col7, col8, col9 = st.columns(5)
+fig, ax = plt.subplots(figsize=(6,4))
+sns.kdeplot(data=df_filtered, x="Price", ax=ax, shade=True, color="#1f77b4", alpha=0.8)
+ax.set(xlabel='Price', ylabel='Density')
+ax.spines['top'].set_visible(False)
+ax.spines['right'].set_visible(False)
+ax.tick_params(axis='both', which='both', length=0)
+col5.pyplot(fig)
  
 
 
