@@ -415,7 +415,14 @@ st.write(f'<a href="{map_url}" target="_blank">Click here to view map</a>', unsa
 
 #iframe = '<iframe src="https://www.instantstreetview.com/@51.902544,-8.478546,-7.89h,0p,0z,t3TYjiEEK68_KwPyXNtsJA" width="1000" height="500"></iframe>'
 #html_component = components.html(iframe, width=1000, height=500)
+url = "https://www.google.com"
+link_text = "Click here to open popup window"
 
+# Create the link with an onclick event
+link = f'<a href="#" onclick="window.open(\'{url}\', \'popup\', width=800, height=600)"> {link_text} </a>'
+
+# Display the link in Streamlit
+st.markdown(link, unsafe_allow_html=True)
 
 
  
