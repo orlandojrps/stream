@@ -542,4 +542,4 @@ features = np.array([pred_beds, pred_baths, mean_price_m2, mean_price_m2, mean_p
 #######features = np.array([pred_beds, pred_baths, pred_area, pred_area, pred_area, pred_area]).reshape(1, -1)
 prediction = predict(features)
 #c2.write('Your Suggested Price is:', 12)  
-c2.markdown(f"<div style='font-size: 64px;'>{prediction}</div>", unsafe_allow_html=True)
+c2.markdown(f"<div style='font-size: 64px;'>{priceArea}</div>", unsafe_allow_html=True)
