@@ -43,7 +43,7 @@ city_areas.insert(0, "ALL")
 # Area Select
 #st.sidebar.subheader('Area Filter')
 st.sidebar.markdown(
-    f'<h3 style="color: #1B9685;">Area Filter \U0001F1EA</h3>',
+    f'<h3 style="color: #1B9685;">Area Filter</h3>',
     unsafe_allow_html=True
 )
 df_city_area = st.sidebar.selectbox('Select City Area', city_areas)
@@ -65,13 +65,14 @@ st.sidebar.markdown(
 )
 pred_city_area = st.sidebar.selectbox('City Area', city_areas)
 
-st.sidebar.subheader('Price Prediction Modeling')
-pred_area = st.sidebar.slider('Specify Size', 40, 1000, 150)
+#st.sidebar.subheader('Price Prediction Modeling')
+pred_area = st.sidebar.slider('Specify Size', 40, 800, 150)
 
 
+beds_list = sorted(df["Beds"].unique())
 
 st.sidebar.subheader('Donut chart parameter')
-donut_theta = st.sidebar.selectbox('Select data', ('q2', 'q3'))
+pred_beds = st.sidebar.selectbox('Qty Beds', beds_list))
 
 st.sidebar.subheader('Line chart parameters')
 plot_data = st.sidebar.multiselect('Select data', ['temp_min', 'temp_max'], ['temp_min', 'temp_max'])
