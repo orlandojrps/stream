@@ -558,5 +558,4 @@ print(f"<div style='font-size: 64px;'>{formatted_prediction}</div>")
 st.markdown(f"<style>{link_class}</style>", unsafe_allow_html=True)
 
 # Display the list of clickable links with the CSS class applied
-for link in link_list:
     st.markdown(f'<a class="link" href="{link}" target="_blank">{link}</a>', unsafe_allow_html=True)
