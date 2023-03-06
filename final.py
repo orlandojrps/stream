@@ -17,6 +17,8 @@ import plost
 import streamlit.components.v1 as components
 import numpy as np
 import seaborn as sns
+import matplotlib.pyplot as plt
+
 
 #!pip install plost
 
