@@ -40,6 +40,7 @@ st.sidebar.image("https://raw.githubusercontent.com/orlandojrps/stream/main/map.
 city_areas = list(df['city_area'].unique())
 city_areas.insert(0, "ALL")
 
+city_areas2= list(df['city_area'].unique())
 # Area Select
 #st.sidebar.subheader('Area Filter')
 st.sidebar.markdown(
@@ -63,7 +64,7 @@ st.sidebar.markdown(
     f'<h3 style="color: #1B9685;">Price Prediction Modeling \U0001F3AF</h3>',
     unsafe_allow_html=True
 )
-pred_city_area = st.sidebar.selectbox('City Area', city_areas)
+pred_city_area = st.sidebar.selectbox('City Area', city_areas2)
 
 #st.sidebar.subheader('Price Prediction Modeling')
 pred_area = st.sidebar.slider('Specify Size', 40, 800, 150)
