@@ -139,14 +139,31 @@ metric_html2 = f"<div style='font-size: 18px; font-weight: bold;'>Max Price: €
 col1m, col2m = st.columns(2)
 col1.markdown(metric_html + metric_html2, unsafe_allow_html=True)
 
+#fig, ax = plt.subplots(figsize=(6,4))
+#sns.kdeplot(data=df_filtered, x="Price", ax=ax, shade=True, color="#1f77b4", alpha=0.8)
+#ax.set(xlabel='Price', ylabel='Density')
+#ax.spines['top'].set_visible(False)
+#ax.spines['right'].set_visible(False)
+#ax.tick_params(axis='both', which='both', length=0)
+#col1.pyplot(fig)
+
+
+# Calculate the average price
+avg_price = df_filtered['Price'].mean()
+
+# Create the plot
 fig, ax = plt.subplots(figsize=(6,4))
 sns.kdeplot(data=df_filtered, x="Price", ax=ax, shade=True, color="#1f77b4", alpha=0.8)
 ax.set(xlabel='Price', ylabel='Density')
 ax.spines['top'].set_visible(False)
 ax.spines['right'].set_visible(False)
 ax.tick_params(axis='both', which='both', length=0)
-col1.pyplot(fig)
 
+# Add a vertical line at the average price
+ax.axvline(avg_price, color='red', linestyle='--', linewidth=2)
+
+# Display the plot
+col1.pyplot(fig)
 
 
 ###############################
