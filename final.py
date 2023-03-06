@@ -532,6 +532,6 @@ df_filtered_pred['Average Price by City Area'] = df_filtered_pred['city_area'].m
     
 
     
- features = np.array([pred_beds, pred_baths, pred_city_area, df_filtered_pred['Price per m2'], df_filtered_pred['Mean Price per m2'], df_filtered_pred['Average Price by City Area']]).reshape(1, -1)
-    prediction = predict(features)
-    st.write('Your Suggested Price is:', prediction)    
+features = np.array([pred_beds, pred_baths, pred_city_area, df_filtered_pred['Price per m2'], df_filtered_pred['Mean Price per m2'], df_filtered_pred['Average Price by City Area']]).reshape(1, -1)
+prediction = predict(features)
+st.write('Your Suggested Price is:', prediction)    
