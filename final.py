@@ -133,7 +133,7 @@ metric_html0 = f"<div style='font-size: 24px; font-weight: bold;'>Average Price:
 col1.markdown(metric_html0, unsafe_allow_html=True)
 col1.metric("", f"€ {avg_price:,.2f}", " ")
 
-col1m, col2m = st.columns(2)
+#col1m, col2m = st.columns(2)
 metric_html = f"<div style='font-size: 18px; font-weight: bold;'>Min Price: € {min_price:,.2f}</div>"
 metric_html2 = f"<div style='font-size: 18px; font-weight: bold;'>Max Price: € {max_price:,.2f}</div>"
 
