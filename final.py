@@ -536,4 +536,4 @@ priceArea = df_filtered_pred['city_area'].map(average_price)
     
 #features = np.array([pred_beds, pred_baths, pred_city_area, priceM2, priceMean, priceArea]).reshape(1, -1)
 #prediction = predict(features)
-c2.write('Your Suggested Price is:', pred_beds)    
+c2.write('Your Suggested Price is:', 12)    
