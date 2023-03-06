@@ -505,7 +505,7 @@ model = joblib.load(mfile)
 print(model)
 
 # Load the pre-trained linear regression model
-lr_model = joblib.load('model.pkl')
+lr_model = joblib.load(mfile)
  
 # Define the function to make a prediction
 def predict(features):
@@ -537,8 +537,8 @@ priceArea = df_filtered_pred['city_area'].map(average_price)
     
 
     
-#features = np.array([pred_beds, pred_baths, pred_area, median_price_m2, mean_price_m2, average_price]).reshape(1, -1)
-features = np.array([pred_beds, pred_baths, pred_area, pred_area, pred_area, pred_area]).reshape(1, -1)
+features = np.array([pred_beds, pred_baths, pred_area, median_price_m2, mean_price_m2, average_price]).reshape(1, -1)
+#features = np.array([pred_beds, pred_baths, pred_area, pred_area, pred_area, pred_area]).reshape(1, -1)
 prediction = predict(features)
 #c2.write('Your Suggested Price is:', 12)  
 c2.markdown(f"<div style='font-size: 64px;'>{prediction}</div>", unsafe_allow_html=True)
