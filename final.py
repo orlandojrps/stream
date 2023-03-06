@@ -167,7 +167,7 @@ col1.pyplot(fig)
 
 
 ###############################
- col1, col2,col3, col4 = st.columns(4)
+col1, col2,col3, col4 = st.columns(4)
 
 metric_col2 = f"<div style='font-size: 24px; font-weight: bold;'>Average Area (m2):</div>"
 col2.markdown(metric_col2, unsafe_allow_html=True)
