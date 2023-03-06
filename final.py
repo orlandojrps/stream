@@ -18,6 +18,8 @@ import streamlit.components.v1 as components
 import numpy as np
 import seaborn as sns
 import matplotlib.pyplot as plt
+from streamlit.components.v1 import HtmlComponent
+
 
 
 #!pip install plost
