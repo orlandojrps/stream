@@ -391,7 +391,7 @@ def geocode_and_plot_addresses(df):
     # plot the coordinates on a map using Folium
     map_center = [51.897928, -8.470579] # center the map on Cork City
     #m = folium.Map(location=map_center, zoom_start=12)
-    m = folium.Map(location=map_center, zoom_start=12, height='95%', width='100%')
+    m = folium.Map(location=map_center, zoom_start=12, height='100%', width='100%')
     for i, row in df.iterrows():
         if row['Latitude'] and row['Longitude']:
             folium.Marker([row['Latitude'], row['Longitude']], popup=row['Address']).add_to(m)
