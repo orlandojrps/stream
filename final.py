@@ -207,6 +207,25 @@ metric_html2 = f"<div style='font-size: 18px; font-weight: bold;'>Max (Qty):  {m
 col1m, col2m = st.columns(2)
 col3.markdown(metric_html + metric_html2, unsafe_allow_html=True)
 
+
+# Create the scatterplot
+fig, ax = plt.subplots(figsize=(8,6))
+sns.scatterplot(data=df_filtered, x="Area", y="Price", hue="Beds", palette="deep", alpha=0.8)
+
+# Add a title and axis labels
+plt.title("Scatterplot of Price vs. Area (colored by Beds)")
+plt.xlabel("Area")
+plt.ylabel("Price")
+
+# Remove top and right spines and ticks
+ax.spines['top'].set_visible(False)
+ax.spines['right'].set_visible(False)
+ax.tick_params(axis='both', which='both', length=0)
+
+# Display the plot
+col3.pyplot(fig)
+
+
 ##################################
 ###############################
 
