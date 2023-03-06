@@ -386,7 +386,7 @@ def geocode_and_plot_addresses(df):
 #filtered_df = df[df['city_area'] == city_area]
 
 # Create a button to plot addresses on the map
-if 0=0:
+if (0==0):
     geocode_and_plot_addresses(df_filtered)
     
     
