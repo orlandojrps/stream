@@ -377,7 +377,7 @@ def geocode_and_plot_addresses(df):
             folium.Marker([row['Latitude'], row['Longitude']], popup=row['Address']).add_to(m)
 
     # add the map to the interface
-    st.write(m._repr_html_(), unsafe_allow_html=True)
+    c1.write(m._repr_html_(), unsafe_allow_html=True)
 
 # Load the DataFrame
 #df = pd.read_csv('https://raw.githubusercontent.com/orlandojrps/stream/main/df_final.csv')
