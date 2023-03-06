@@ -518,6 +518,7 @@ df_filtered_pred = df[df['city_area'] == pred_city_area]
     
     # Calculate the price per square meter
 df_filtered_pred['Price per m2'] = df_filtered_pred['Price'] / df_filtered_pred['Area']
+priceM2 = df_filtered_pred['Price'] / df_filtered_pred['Area']
 
 # Calculate the average price per square meter by city area
 mean_price_m2 = df_filtered_pred.groupby('city_area')['Price per m2'].mean()
@@ -527,11 +528,12 @@ average_price = df_filtered_pred.groupby('city_area')['Price'].mean()
 
 # Add the mean price per square meter and average price by city area as new columns to the DataFrame
 df_filtered_pred['Mean Price per m2'] = df_filtered_pred['city_area'].map(mean_price_m2)
+priceMean=df_filtered_pred['city_area'].map(mean_price_m2)
 df_filtered_pred['Average Price by City Area'] = df_filtered_pred['city_area'].map(average_price)
-
+priceArea = df_filtered_pred['city_area'].map(average_price)
     
 
     
-features = np.array([pred_beds, pred_baths, pred_city_area, df_filtered_pred['Price per m2'], df_filtered_pred['Mean Price per m2'], df_filtered_pred['Average Price by City Area']])
+features = np.array([pred_beds, pred_baths, pred_city_area, priceM2, priceMean, priceArea]).reshape(1, -1)
 prediction = predict(features)
 st.write('Your Suggested Price is:', prediction)    
