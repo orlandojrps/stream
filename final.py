@@ -15,6 +15,7 @@ import time
 from PIL import Image
 import plost
 import streamlit.components.v1 as components
+import numpy as np
 
 #!pip install plost
 
