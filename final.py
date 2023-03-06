@@ -221,7 +221,7 @@ num_bins = 10
 # Create histogram and display in col5
 col5, col6, col7, col8, col9 = st.columns(5)
 #col5.header("Histogram Example")
-hist_values, hist_edges = np.histogram(df_filtered['Price'], bins=num_bins, range=hist_range)
+hist_values, hist_edges = np.histogram(df_filtered['Price'], bins=num_bins)
 col5.bar_chart(hist_values, width=200, height=200, use_container_width=False)
 #col1m, col2m = st.columns(2)
 #metric_html = f"<div style='font-size: 18px; font-weight: bold;'>Min (m2):  {min_area:,.2f}</div>"
