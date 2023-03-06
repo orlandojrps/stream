@@ -125,7 +125,6 @@ st.markdown(
     unsafe_allow_html=True
 )
 # Row A
-col00 = st.columns(1)
 st.markdown('### Metrics: '+ df_city_area)
 
 col0,col1, col2,col3, col4 = st.columns(5)
