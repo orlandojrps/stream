@@ -232,10 +232,14 @@ sns.set_style('whitegrid')
 sns.set_palette('husl')
 #sns.kdeplot(df_filtered['Price'], ax=col5, shade=True, common_norm=True)
 
-fig, ax = plt.subplots(figsize=(5,5))
+
+fig, ax = plt.subplots()
 sns.kdeplot(data=df_filtered, x="Price", ax=ax, shade=True)
 ax.set(xlabel='Price', ylabel='Density')
 st.pyplot(fig, width=200, height=200, use_container_width=False)
+
+
+
 
 
 #col5.set(xlabel='Price', ylabel='Density')
