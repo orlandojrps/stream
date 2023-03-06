@@ -18,6 +18,8 @@ div.css-j5r0tf.e1tzin5v2{
  border-radius: 10px;
  #color: #000000;
  box-shadow: 10px;
+    margin-top: -5em;
+
 }
 
 
@@ -28,6 +30,8 @@ background-color: #36b9cc;
  border-radius: 10px;
  color: #ffc300;
  box-shadow: 10px;
+    margin-top: -5em;
+
     
 }
 
@@ -40,7 +44,7 @@ label.css-mkogse.e16fv1kl2 {
 
 /* Move block container higher */
 div.block-container.css-18e3th9.egzxvld2 {
-  margin-top: 0;
+  margin-top: -5em;
 }
 
 
