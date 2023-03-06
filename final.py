@@ -226,8 +226,10 @@ col5, col6, col7, col8, col9 = st.columns(5)
 #1col5.bar_chart(hist_values, width=200, height=200, use_container_width=False)
 
 col5.header("KDE Plot Example")
-df_filtered['Price'] = df_filtered['Price'].astype(float)
+sns.set_style('whitegrid')
+sns.set_palette('husl')
 sns.kdeplot(df_filtered['Price'], ax=col5, shade=True, common_norm=True)
+col5.set(xlabel='Price', ylabel='Density')
 #col1m, col2m = st.columns(2)
 #metric_html = f"<div style='font-size: 18px; font-weight: bold;'>Min (m2):  {min_area:,.2f}</div>"
 #metric_html2 = f"<div style='font-size: 18px; font-weight: bold;'>Max (m2):  {max_area:,.2f}</div>"
