@@ -76,3 +76,28 @@ footer.css-12gp8ed.eknhn3m4 {
 div.vg-tooltip-element {
   display: none;
 }
+
+
+
+# Define a CSS class for the links
+link_class = """
+    .link {
+        color: #3366bb;
+        font-size: 18px;
+        font-weight: bold;
+        text-decoration: none;
+        transition: all 0.3s ease-in-out;
+    }
+    .link:hover {
+        color: #cc0000;
+        text-decoration: underline;
+    }
+"""
+
+# Add the CSS class to the Markdown
+st.markdown(f"<style>{link_class}</style>", unsafe_allow_html=True)
+
+# Display the list of clickable links with the CSS class applied
+for link in link_list:
+    st.markdown(f'<a class="link" href="{link}" target="_blank">{link}</a>', unsafe_allow_html=True)
+
