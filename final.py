@@ -187,7 +187,7 @@ ax.spines['right'].set_visible(False)
 ax.tick_params(axis='both', which='both', length=0)
 
 # Add labels
-ax.set(xlabel='Area', ylabel=df_filtered["city_area"])
+ax.set(xlabel='Area', ylabel=df_city_area)
 
 # Display the plot
 col2.pyplot(fig)
