@@ -56,7 +56,7 @@ df_city_area = st.sidebar.selectbox('Select City Area', city_areas)
     
 #st.sidebar.subheader('Price Prediction Modeling \U0001F3AF')
 st.sidebar.markdown(
-    f'<h3 style="color: red;">Price Prediction Modeling \U0001F3AF</h3>',
+    f'<h3 style="color: #FFD700;">Price Prediction Modeling \U0001F3AF</h3>',
     unsafe_allow_html=True
 )
 pred_city_area = st.sidebar.selectbox('City Area', city_areas)
