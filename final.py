@@ -18,7 +18,7 @@ import streamlit.components.v1 as components
 import numpy as np
 import seaborn as sns
 import matplotlib.pyplot as plt
- 
+import joblib
 
 #!pip install plost
 
@@ -492,4 +492,18 @@ def street_view_popup():
 st.markdown('### Line chart')
 st.line_chart(seattle_weather, x = 'date', y = plot_data, height = plot_height)
 
+
+
+################## PREDICTION#################################
+from io import BytesIO
+import requests
+mLink = 'https://github.com/orlandojrps/stream/blob/main/model_lr_real_estate.pkl?raw=true'
+mfile = BytesIO(requests.get(mLink).content)
+
+model = joblib.load(mfile)
+
+print(model)
+
+# Load the pre-trained linear regression model
+lr_model = joblib.load('model.pkl')
  
