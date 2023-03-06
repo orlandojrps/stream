@@ -434,15 +434,15 @@ if c1.button('Plot addresses on the map'):
 with c2:
     st.markdown('### Best Offers')
     
-map_url = 'https://www.instantstreetview.com/@51.902544,-8.478546,-7.89h,0p,0z,t3TYjiEEK68_KwPyXNtsJA'
-st.write(f'<a href="{map_url}" target="_blank">Click here to view map</a>', unsafe_allow_html=True)
+#map_url = 'https://www.instantstreetview.com/@51.902544,-8.478546,-7.89h,0p,0z,t3TYjiEEK68_KwPyXNtsJA'
+#st.write(f'<a href="{map_url}" target="_blank">Click here to view map</a>', unsafe_allow_html=True)
      
 #metric_c2 = "<div style='font-size: 24px; font-weight: bold;'>Number Houses:</div>"
 #c2.markdown(metric_c2, unsafe_allow_html=True)
 
 # Adicionar o valor de n_houses e o ícone da casa
 value = f"{n_houses} \U0001F3E1"
-c2.markdown(f"<div style='font-size: 64px;'>{value}</div>", unsafe_allow_html=True)
+#c2.markdown(f"<div style='font-size: 64px;'>{value}</div>", unsafe_allow_html=True)
 
 # Get the top 10 rows with the lowest prices
 df_filtered_links = df_filtered.nsmallest(10, "Price")
